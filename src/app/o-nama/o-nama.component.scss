@@ -1,0 +1,47 @@
+.section-title {
+    text-align: center;
+    font-size: 26px;
+    line-height: 1em;
+    margin: 0;
+}
+
+.title-underline {
+    width: 100px;
+    height: 3px;
+    background-color: #6f6344;
+    display: block;
+    margin: 6px auto;
+}
+
+img {
+    width: 450px;
+    height: 300px;
+    border: 2px solid #fff;
+    -webkit-box-shadow: 22px 22px 3px -1px #6f6344;
+    -moz-box-shadow: 22px 22px 3px -1px #6f6344;
+    box-shadow: 22px 22px 3px -1px #6f6344;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.image-text-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.sola-text p {
+    font-size: 22px;
+    text-align: justify;
+}
+
+.sola-text {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.wrapper {
+    padding-left: 50px;
+    padding-right: 50px;
+}

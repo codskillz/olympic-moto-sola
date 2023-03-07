@@ -1,0 +1,36 @@
+.video-cover {
+    position: relative;
+    display: grid;
+    top: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    z-index: -1;
+}
+
+.img1 {
+    background-image: url(../assets/media/images/fixed/moto-1.jpg);
+    min-height: 400px;
+}
+
+.parallax {
+    position: relative;
+    opacity: 0.7;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .video-cover video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .video-cover video {
+        width: auto;
+        height: 100%;
+    }
+}
