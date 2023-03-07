@@ -1,0 +1,38 @@
+.section-title {
+    text-align: center;
+    font-size: 30px;
+    line-height: 1em;
+    margin: 0;
+}
+
+.title-underline {
+    width: 100px;
+    height: 3px;
+    background-color: #6f6344;
+    display: block;
+    margin: 6px auto;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.image-caption {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.image-wrapper img {
+    height: 200px;
+}

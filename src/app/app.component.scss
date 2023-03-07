@@ -9,7 +9,17 @@
 
 .img1 {
     background-image: url(../assets/media/images/fixed/moto-1.jpg);
-    min-height: 400px;
+    min-height: 500px;
+}
+
+.img2 {
+    background-image: url(../assets/media/images/fixed/crew-1.jpg);
+    min-height: 500px;
+}
+
+.img3 {
+    background-image: url(../assets/media/images/fixed/formula-1.jpg);
+    min-height: 500px;
 }
 
 .parallax {
@@ -32,5 +42,11 @@
     .video-cover video {
         width: auto;
         height: 100%;
+    }
+}
+
+@media (max-width: 568px) {
+    .parallax {
+        background-attachment: scroll;
     }
 }

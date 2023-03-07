@@ -1,0 +1,24 @@
+<section id="motocikli">
+    <div data-aos="fade">
+        <h3 class="section-title">Dostupne marke</h3>
+        <span class="title-underline"></span>
+    </div>
+
+    <br><br><br><br>
+
+    <div class="image-container">
+        <div class="image-wrapper" *ngFor="let image of images" data-aos="zoom-in" data-aos-duration="1500">
+            <img [src]="image.src" [alt]="image.alt" [ngClass]="image.class">
+        </div>
+    </div>
+
+    <br><br>
+
+    <h3 class="section-title" data-aos="fade">Generalni zastupnik</h3>
+
+    <br><br>
+
+    <div class="image-container" data-aos="zoom-in" data-aos-duration="1500">
+        <img class="indian" src="assets/media/images/logotipi/indian-logo.png" alt="Indian logo">
+    </div>
+</section>

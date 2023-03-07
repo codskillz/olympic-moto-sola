@@ -1,0 +1,13 @@
+<section id="usluge">
+    <h3 class="section-title">Usluge</h3>
+    <span class="title-underline"></span>
+
+    <br><br><br><br>
+
+    <div class="image-container">
+        <div class="image-wrapper" *ngFor="let image of images" data-aos="fade-left" data-aos-duration="1500">
+            <img [src]="image.src" [alt]="image.alt">
+            <div class="image-caption">{{ image.caption }}</div>
+        </div>
+    </div>
+</section>
