@@ -1,0 +1,51 @@
+.section-title {
+    text-align: center;
+    font-size: 30px;
+    line-height: 1em;
+    margin: 0;
+}
+
+.title-underline {
+    width: 100px;
+    height: 3px;
+    background-color: #6f6344;
+    display: block;
+    margin: 6px auto;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.text-content {
+    font-size: 23px;
+}
+
+.google-map {
+    margin: 0 25px;
+}
+
+.image-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.image-text p {
+    margin-left: 10px;
+}
+
+.image-text img {
+    width: 35px;
+    height: auto;
+}
+
+.working-hours {
+    display: flex;
+    align-items: start;
+}
+
+.paragraphs-working-hours {
+    display: block;
+}

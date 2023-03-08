@@ -8,6 +8,7 @@ import { ONamaComponent } from './o-nama/o-nama.component';
 import { DostupneMarkeComponent } from './dostupne-marke/dostupne-marke.component';
 import { UslugeComponent } from './usluge/usluge.component';
 import { KontaktComponent } from './kontakt/kontakt.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { KontaktComponent } from './kontakt/kontakt.component';
     ONamaComponent,
     DostupneMarkeComponent,
     UslugeComponent,
-    KontaktComponent
+    KontaktComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
