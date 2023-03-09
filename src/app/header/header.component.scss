@@ -11,7 +11,6 @@ nav {
 
 nav ul li {
     display: inline-block;
-    margin-left: 40px;
     padding: 20px;
 }
 
@@ -21,12 +20,140 @@ nav ul li a {
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.6px;
-    font-weight: 600;
-    font-size: 15px;
+    font-weight: 800;
+    font-size: 17px;
     text-decoration: none;
-    -webkit-text-stroke: 2 black;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.8px;
 }
 
 .logo {
-    width: 35vh;
+    width: 40vh;
+}
+
+/* Dropdown content */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin: 0;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .hover-rotate {
+    transform: rotate(90deg);
+}
+
+.dropdown-animation {
+    animation: growDown 300ms ease-in-out forwards;
+    transform-origin: top center;
+}
+
+#drop-kawa,
+#drop-ducati,
+#drop-mv-agusta,
+#drop-polaris,
+#drop-indian {
+    transition: 0.5s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#drop-kawa:hover {
+    background-color: #51802a;
+}
+
+#drop-ducati:hover {
+    background-color: #c40600;
+}
+
+#drop-mv-agusta:hover {
+    background-color: #ae8522;
+}
+
+#drop-polaris:hover {
+    background-color: #0068ad;
+}
+
+#drop-indian:hover {
+    background-color: #881f00;
+}
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0);
+    }
+
+    80% {
+        transform: scaleY(1.1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+.hover-rotate {
+    transition: transform .3s;
+    /* Apply the transition property. Enables the animation */
+}
+
+.hover-anim:hover .hover-rotate {
+    transform: rotate(90deg);
+    /* Rotate if mouse is hovered */
+}
+
+.fa-chevron-right {
+    color: white;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.8px;
+}
+
+/* hover animation */
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #6f6344;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 4px;
+    bottom: -5px;
+    left: 0;
+    background-color: #6f6344;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
