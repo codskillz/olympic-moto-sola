@@ -1,8 +1,8 @@
 <app-header></app-header>
 
 <div class="video-cover">
-    <video autoplay loop muted plays-inline>
-        <source src="assets/media/cover-video.mp4" type="video/mp4">
+    <video [autoplay]="true" [loop]="true" [muted]="true" *ngIf="video.src">
+        <source [src]="video.src" [type]="video.type">
     </video>
 </div>
 

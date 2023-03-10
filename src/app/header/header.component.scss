@@ -1,12 +1,19 @@
 nav {
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     padding: 3px 15%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.473);
+    z-index: 1039;
+    transition: top 0.3s;
+}
+
+.navbar.hidden {
+    top: -100%;
 }
 
 nav ul li {
@@ -14,8 +21,12 @@ nav ul li {
     padding: 20px;
 }
 
+ul {
+    margin-top: 20px;
+}
+
 nav ul li a {
-    margin: 0 14px;
+    margin: 0 15px;
     color: #fff;
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
@@ -28,7 +39,8 @@ nav ul li a {
 }
 
 .logo {
-    width: 40vh;
+    padding-top: -50px;
+    width: 35vh;
 }
 
 /* Dropdown content */
@@ -118,12 +130,10 @@ nav ul li a {
 
 .hover-rotate {
     transition: transform .3s;
-    /* Apply the transition property. Enables the animation */
 }
 
 .hover-anim:hover .hover-rotate {
     transform: rotate(90deg);
-    /* Rotate if mouse is hovered */
 }
 
 .fa-chevron-right {
@@ -132,7 +142,7 @@ nav ul li a {
     -webkit-text-stroke-width: 0.8px;
 }
 
-/* hover animation */
+/* Hover animation */
 
 .hover-underline-animation {
     display: inline-block;
