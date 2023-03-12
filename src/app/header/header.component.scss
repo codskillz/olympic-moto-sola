@@ -147,7 +147,7 @@ nav ul li a {
 .hover-underline-animation {
     display: inline-block;
     position: relative;
-    color: #6f6344;
+    color: #9c7d2e;
 }
 
 .hover-underline-animation::after {
@@ -158,7 +158,7 @@ nav ul li a {
     height: 4px;
     bottom: -5px;
     left: 0;
-    background-color: #6f6344;
+    background-color: #9c7d2e;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }

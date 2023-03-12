@@ -11,17 +11,17 @@ export class UslugeComponent {
     {
       src: 'assets/media/images/usluge/bike-service.png',
       alt: 'Servis vozila',
-      caption: 'Ovlašteni servis i popravak motocikla za marke istih koje možete pronaći na stranicama OLYMPIC MOTO ŠOLA.'
+      caption: '<p><b>Ovlašteni servis</b> i <b>popravak</b> motocikla za marke<br>istih koje možete pronaći na stranicama <b>OLYMPIC MOTO ŠOLA</b>.</p>'
     },
     {
       src: 'assets/media/images/usluge/bike-renting.png',
       alt: 'Najam vozila',
-      caption: 'Najam motocikla/quadova dostupnih u našoj trgovini.'
+      caption: '<p>Najam motocikla/quadova<br><b>dostupnih</b> u našoj trgovini.</p>'
     },
     {
       src: 'assets/media/images/usluge/bike-selling.png',
       alt: 'Prodaja vozila',
-      caption: 'Prodaja motocikla koje također možete pronaći na stranicama OLYMPIC MOTO ŠOLA.'
+      caption: '<p>Prodaja motocikla koje također<br>možete pronaći na stranicama <b>OLYMPIC MOTO ŠOLA</b>.</p>'
     }
   ];
 }

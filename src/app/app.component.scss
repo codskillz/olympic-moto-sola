@@ -54,3 +54,10 @@ section {
         background-attachment: scroll;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .video-cover {
+        position: relative;
+        overflow: hidden;
+    }
+}

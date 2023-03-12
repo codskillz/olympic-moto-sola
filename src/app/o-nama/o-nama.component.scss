@@ -32,7 +32,7 @@ img {
 }
 
 .sola-text p {
-    font-size: 22px;
+    font-size: 20px;
     text-align: justify;
 }
 
@@ -44,4 +44,39 @@ img {
 .wrapper {
     padding-left: 50px;
     padding-right: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    img {
+        width: 90%;
+        height: auto;
+        border: 2px solid #fff;
+        -webkit-box-shadow: 5px 5px 3px -1px #6f6344;
+        -moz-box-shadow: 5px 5px 3px -1px #6f6344;
+        box-shadow: 5px 5px 3px -1px #6f6344;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .image-text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sola-text p {
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .sola-text {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .wrapper {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
 }

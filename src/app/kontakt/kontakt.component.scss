@@ -49,3 +49,50 @@
 .paragraphs-working-hours {
     display: block;
 }
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-content {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .google-map {
+        margin: 0 10px;
+        width: 90%;
+        height: auto;
+    }
+
+    .image-text {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    .image-text p {
+        margin-left: 5px;
+        font-size: 14px;
+    }
+
+    .image-text img {
+        width: 25px;
+        height: auto;
+    }
+
+    .working-hours {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .paragraphs-working-hours {
+        display: inline-block;
+        margin: 5px;
+        font-size: 14px;
+    }
+}
