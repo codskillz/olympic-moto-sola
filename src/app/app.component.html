@@ -1,5 +1,9 @@
 <app-header></app-header>
 
+<div class="image-cover" data-aos="fade" data-aos-duration="2000">
+    <img class="img-cover" src="assets/media/images/image-cover.jpg">
+</div>
+
 <div class="video-cover">
     <video [autoplay]="true" [loop]="true" [muted]="true" *ngIf="video.src">
         <source [src]="video.src" [type]="video.type">

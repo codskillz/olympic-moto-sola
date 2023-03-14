@@ -8,9 +8,9 @@ describe('ONamaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ONamaComponent ]
+      declarations: [ONamaComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(ONamaComponent);
     component = fixture.componentInstance;

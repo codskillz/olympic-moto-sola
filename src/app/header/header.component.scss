@@ -167,3 +167,9 @@ nav ul li a {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
+
+@media screen and (max-width: 768px) {
+    .header {
+        display: none;
+    }
+}

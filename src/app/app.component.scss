@@ -11,6 +11,10 @@ section {
     z-index: -1;
 }
 
+.image-cover {
+    display: none;
+}
+
 .img1 {
     background-image: url(../assets/media/images/fixed/moto-1.jpg);
     min-height: 500px;
@@ -57,7 +61,16 @@ section {
 
 @media screen and (max-width: 768px) {
     .video-cover {
-        position: relative;
-        overflow: hidden;
+        display: none;
+    }
+
+    .image-cover {
+        display: inline-block;
+    }
+
+    .image-cover img {
+        max-width: 100%;
+        min-width: 300px;
+        height: auto;
     }
 }

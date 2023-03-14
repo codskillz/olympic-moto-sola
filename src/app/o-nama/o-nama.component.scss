@@ -66,17 +66,14 @@ img {
     }
 
     .sola-text p {
-        font-size: 16px;
+        font-size: 15px;
         text-align: justify;
     }
 
-    .sola-text {
-        padding-left: 5%;
-        padding-right: 5%;
+    .wrapper {
+        padding-left: 5px;
+        padding-right: 5px;
     }
 
-    .wrapper {
-        padding-left: 10%;
-        padding-right: 10%;
-    }
+    $aos-distance: 200px; // It has to be above import
 }

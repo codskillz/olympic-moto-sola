@@ -23,7 +23,7 @@
 }
 
 .google-map {
-    margin: 0 30px;
+    margin: 0 20px;
 }
 
 .image-text {
@@ -50,6 +50,10 @@
     display: block;
 }
 
+#btn {
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
     .wrapper {
         display: flex;
@@ -63,9 +67,7 @@
     }
 
     .google-map {
-        margin: 0 10px;
-        width: 90%;
-        height: auto;
+        display: none;
     }
 
     .image-text {
@@ -94,5 +96,32 @@
         display: inline-block;
         margin: 5px;
         font-size: 14px;
+    }
+
+    .go-to-map {
+        padding-top: 20px;
+    }
+
+    #btn {
+        display: block;
+        text-decoration: none;
+        background: #6f6344;
+        border-radius: 999px;
+        box-shadow: #6f6344 0 10px 20px -10px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 24px;
+        opacity: 1;
+        outline: 0 solid transparent;
+        padding: 8px 12px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: fit-content;
+        word-break: break-word;
+        border: 0;
     }
 }
