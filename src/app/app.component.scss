@@ -2,9 +2,15 @@ section {
     padding: 0 5em 0 5em;
 }
 
-.video-cover {
+.video-cover video {
     position: relative;
-    display: grid;
+    display: block;
+    object-fit: cover;
+    height: 100%;
+    visibility: visible;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    max-width: 100%;
     top: 0;
     bottom: 0;
     overflow-x: hidden;
@@ -50,27 +56,5 @@ section {
     .video-cover video {
         width: auto;
         height: 100%;
-    }
-}
-
-@media (max-width: 568px) {
-    .parallax {
-        background-attachment: scroll;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .video-cover {
-        display: none;
-    }
-
-    .image-cover {
-        display: inline-block;
-    }
-
-    .image-cover img {
-        max-width: 100%;
-        min-width: 300px;
-        height: auto;
     }
 }

@@ -1,46 +1,56 @@
-nav {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 3px 15%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.473);
-    z-index: 1039;
-    transition: top 0.3s;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-.navbar.hidden {
-    top: -100%;
+nav {
+    position: fixed;
+    display: flex;
+    height: 70px;
+    width: 100%;
+    background: #1b1b1b;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+    z-index: 1039;
+}
+
+nav .logo {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
 }
 
 nav ul li {
-    display: inline-block;
-    padding: 20px;
-}
-
-ul {
-    margin-top: 20px;
+    margin: 0 5px;
 }
 
 nav ul li a {
-    margin: 0 15px;
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
-    font-weight: 800;
-    font-size: 17px;
+    color: #f2f2f2;
     text-decoration: none;
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 0.8px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
 }
 
-.logo {
-    padding-top: -50px;
-    width: 35vh;
+nav ul li a.active,
+nav ul li a:hover {
+    color: #111;
+    background: #fff;
 }
 
 /* Dropdown content */
@@ -57,7 +67,6 @@ nav ul li a {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    margin: 0;
 }
 
 .dropdown-content a {
@@ -65,7 +74,7 @@ nav ul li a {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .dropdown-content a:hover {
@@ -74,6 +83,7 @@ nav ul li a {
 
 .dropdown:hover .dropdown-content {
     display: block;
+    margin-top: 5px;
 }
 
 .dropdown:hover .hover-rotate {
@@ -128,48 +138,105 @@ nav ul li a {
     }
 }
 
-.hover-rotate {
-    transition: transform .3s;
-}
-
-.hover-anim:hover .hover-rotate {
-    transform: rotate(90deg);
-}
-
-.fa-chevron-right {
-    color: white;
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 0.8px;
-}
-
-/* Hover animation */
-
-.hover-underline-animation {
-    display: inline-block;
-    position: relative;
-    color: #9c7d2e;
-}
-
-.hover-underline-animation::after {
-    content: '';
+/* Hamburger Menu */
+.hamburger {
+    display: none;
     position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 4px;
-    bottom: -5px;
-    left: 0;
-    background-color: #9c7d2e;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+    z-index: 1040;
 }
 
-.hover-underline-animation:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 768px) {
-    .header {
+@media screen and (max-width: 912px) {
+    nav ul {
         display: none;
+    }
+
+    nav .logo img {
+        width: 100%;
+        height: auto;
+        margin-left: -60px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* Show the menu when the hamburger button is clicked */
+    nav ul.show {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #1b1b1b;
+        z-index: 1039;
+        transform: translateX(-100%);
+        animation: showMenu 0.5s forwards;
+    }
+
+    @keyframes showMenu {
+        0% {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    nav ul.hide {
+        animation: hideMenu 0.5s forwards;
+    }
+
+    @keyframes hideMenu {
+        0% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+    }
+
+    .hamburger.active div:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active div:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    nav ul.show li {
+        margin: 15px;
+    }
+
+    nav ul.show li a {
+        font-size: 24px;
+        padding: 10px 0;
+        border-radius: 5px;
+        letter-spacing: 1px;
     }
 }
