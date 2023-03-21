@@ -17,7 +17,12 @@ nav {
     justify-content: space-between;
     padding: 0 50px 0 100px;
     flex-wrap: wrap;
-    z-index: 1039;
+    z-index: 10;
+    top: 0;
+}
+
+.nav-hidden {
+    transform: translateY(-100%);
 }
 
 nav .logo {
@@ -158,6 +163,7 @@ nav ul li a:hover {
 }
 
 @media screen and (max-width: 912px) {
+
     nav ul {
         display: none;
     }
@@ -173,7 +179,7 @@ nav ul li a:hover {
     }
 
     /* Show the menu when the hamburger button is clicked */
-    nav ul.show {
+    .menu.show {
         display: flex !important;
         flex-direction: column;
         align-items: center;
@@ -184,7 +190,7 @@ nav ul li a:hover {
         top: 0;
         left: 0;
         background-color: #1b1b1b;
-        z-index: 1039;
+        z-index: 10;
         transform: translateX(-100%);
         animation: showMenu 0.5s forwards;
     }
@@ -198,22 +204,6 @@ nav ul li a:hover {
         100% {
             opacity: 1;
             transform: translateX(0);
-        }
-    }
-
-    nav ul.hide {
-        animation: hideMenu 0.5s forwards;
-    }
-
-    @keyframes hideMenu {
-        0% {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        100% {
-            opacity: 0;
-            transform: translateX(-100%);
         }
     }
 
@@ -234,9 +224,12 @@ nav ul li a:hover {
     }
 
     nav ul.show li a {
-        font-size: 24px;
-        padding: 10px 0;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 500;
+        padding: 8px;
         border-radius: 5px;
         letter-spacing: 1px;
+        transition: all 0.3s ease;
     }
 }

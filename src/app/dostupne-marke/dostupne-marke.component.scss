@@ -19,22 +19,25 @@
     align-items: center;
 }
 
+.najmanji {
+    height: 110px;
+    margin: 0 75px;
+    transition: 0.5s;
+}
+
 .obicni {
-    filter: grayscale(100%);
-    height: 150px;
+    height: 140px;
     margin: 0 75px;
     transition: 0.5s;
 }
 
 .image-container img:hover {
-    filter: grayscale(0%);
     transform: scale(1.2);
     cursor: pointer;
 }
 
 .image-container .indian {
-    filter: grayscale(100%);
-    height: 180px;
+    height: 190px;
     transition: 0.5s;
 }
 
@@ -47,9 +50,14 @@
     }
 
     .obicni {
-        filter: grayscale(0%);
-        height: 100px;
+        height: 120px;
         margin: 0 20px 20px;
+        transition: 0.5s;
+    }
+
+    .najmanji {
+        height: 100px;
+        margin: 0 75px;
         transition: 0.5s;
     }
 
@@ -58,8 +66,8 @@
     }
 
     .image-container .indian {
-        filter: grayscale(0%);
-        height: 150px;
+
+        height: 170px;
         margin: 5px;
         transition: 0.5s;
     }

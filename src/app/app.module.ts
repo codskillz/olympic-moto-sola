@@ -10,6 +10,8 @@ import { UslugeComponent } from './usluge/usluge.component';
 import { KontaktComponent } from './kontakt/kontakt.component';
 import { FooterComponent } from './footer/footer.component';
 
+import { NgxHideOnScrollModule } from 'ngx-hide-on-scroll';
+
 
 
 @NgModule({
@@ -24,7 +26,8 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxHideOnScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]

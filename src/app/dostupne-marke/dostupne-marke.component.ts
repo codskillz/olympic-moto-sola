@@ -9,23 +9,28 @@ export class DostupneMarkeComponent {
   images = [
     {
       src: 'assets/media/images/logotipi/kawasaki-logo.png',
-      alt: 'Kawasaki logo',
+      alt: 'Kawasaki',
       class: 'obicni',
     },
     {
       src: 'assets/media/images/logotipi/ducati-logo.png',
-      alt: 'Ducati logo',
-      class: 'obicni',
+      alt: 'Ducati',
+      class: 'najmanji',
     },
     {
       src: 'assets/media/images/logotipi/mv-agusta-logo.png',
-      alt: 'MV Agusta logo',
-      class: 'obicni',
+      alt: 'MV Agusta',
+      class: 'najmanji',
     },
     {
       src: 'assets/media/images/logotipi/polaris-logo.png',
-      alt: 'Polaris logo',
+      alt: 'Polaris',
       class: 'obicni',
+    },
+    {
+      src: 'assets/media/images/logotipi/indian-logo.png',
+      alt: 'Indian',
+      class: 'indian'
     }
   ];
 }
