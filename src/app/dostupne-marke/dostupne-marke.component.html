@@ -7,8 +7,7 @@
     <br><br>
 
     <div class="image-container" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
-        <div class="image-wrapper" *ngFor="let image of images" data-aos="zoom-in" data-aos-duration="1500"
-            data-aos-once="true">
+        <div *ngFor="let image of images" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
             <img [src]="image.src" [alt]="image.alt" [ngClass]="image.class" *ngIf="image.alt==='Indian'">
         </div>
     </div>
@@ -20,8 +19,7 @@
     <br><br>
 
     <div class="image-container">
-        <div class="image-wrapper" *ngFor="let image of images" data-aos="zoom-in" data-aos-duration="1500"
-            data-aos-once="true">
+        <div *ngFor="let image of images" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
             <img [src]="image.src" [alt]="image.alt" [ngClass]="image.class"
                 *ngIf="image.alt==='Kawasaki' || image.alt==='Polaris'">
         </div>
@@ -34,8 +32,7 @@
     <br><br>
 
     <div class="image-container">
-        <div class="image-wrapper" *ngFor="let image of images" data-aos="zoom-in" data-aos-duration="1500"
-            data-aos-once="true">
+        <div *ngFor="let image of images" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
             <img [src]="image.src" [alt]="image.alt" [ngClass]="image.class"
                 *ngIf="image.alt==='Ducati' || image.alt==='MV Agusta'">
         </div>

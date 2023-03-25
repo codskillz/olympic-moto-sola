@@ -7,10 +7,10 @@
             <div class="line"></div>
         </div>
         <ul class="menu">
-            <li><a href="#">Početna</a></li>
-            <li><a href="#o-nama">O nama</a></li>
+            <li (click)="toggleMenu()"><a href="#">Početna</a></li>
+            <li (click)="toggleMenu()"><a href="#o-nama">O nama</a></li>
             <div class="dropdown">
-                <li><a href="#motocikli">Motocikli</a></li>
+                <li (click)="toggleMenu()"><a href="#motocikli">Motocikli</a></li>
                 <div class="dropdown-content dropdown-animation">
                     <a href="#" id="drop-kawa">Kawasaki</a>
                     <a href="#" id="drop-ducati">Ducati</a>
@@ -19,8 +19,8 @@
                     <a href="#" id="drop-indian">Indian</a>
                 </div>
             </div>
-            <li><a href="#usluge">Usluge</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
+            <li (click)="toggleMenu()"><a href="#usluge">Usluge</a></li>
+            <li (click)="toggleMenu()"><a href="#kontakt">Kontakt</a></li>
         </ul>
     </nav>
 </header>

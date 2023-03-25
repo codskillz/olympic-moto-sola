@@ -7,6 +7,8 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  liItems = document.querySelectorAll('li');
+
   constructor() { }
 
   ngOnInit() {
