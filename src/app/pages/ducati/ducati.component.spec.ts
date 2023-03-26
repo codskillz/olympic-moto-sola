@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DostupneMarkeComponent } from './dostupne-marke.component';
+import { DucatiComponent } from './ducati.component';
 
-describe('DostupneMarkeComponent', () => {
-  let component: DostupneMarkeComponent;
-  let fixture: ComponentFixture<DostupneMarkeComponent>;
+describe('DucatiComponent', () => {
+  let component: DucatiComponent;
+  let fixture: ComponentFixture<DucatiComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DostupneMarkeComponent ]
+      declarations: [ DucatiComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DostupneMarkeComponent);
+    fixture = TestBed.createComponent(DucatiComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

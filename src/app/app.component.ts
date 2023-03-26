@@ -7,9 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'OLYMPIC MOTO Šola';
-
-  video = {
-    src: 'assets/media/cover-video.mp4',
-    type: 'video/mp4'
-  }
 }

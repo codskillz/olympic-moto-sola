@@ -1,6 +1,9 @@
 <header ngxHideOnScroll [classNameWhenHidden]="'nav-hidden'">
     <nav>
-        <div class="logo"><img src="assets/media/images/olympic-moto-sola-logo-transparent.png"></div>
+        <div class="logo">
+            <a [routerLink]="['']"><img src="assets/media/images/olympic-moto-sola-logo-transparent.png">
+            </a>
+        </div>
         <div class="hamburger" (click)="toggleMenu()">
             <div class="line"></div>
             <div class="line"></div>
@@ -12,11 +15,11 @@
             <div class="dropdown">
                 <li (click)="toggleMenu()"><a href="#motocikli">Motocikli</a></li>
                 <div class="dropdown-content dropdown-animation">
-                    <a href="#" id="drop-kawa">Kawasaki</a>
-                    <a href="#" id="drop-ducati">Ducati</a>
-                    <a href="#" id="drop-mv-agusta">MV Agusta</a>
-                    <a href="#" id="drop-polaris">Polaris</a>
-                    <a href="#" id="drop-indian">Indian</a>
+                    <a routerLink="pages/indian" id="drop-indian">Indian</a>
+                    <a routerLink="pages/kawasaki" id="drop-kawa">Kawasaki</a>
+                    <a routerLink="pages/polaris" id="drop-polaris">Polaris</a>
+                    <a routerLink="pages/ducati" id="drop-ducati">Ducati</a>
+                    <a routerLink="pages/mv-agusta" id="drop-mv-agusta">MV Agusta</a>
                 </div>
             </div>
             <li (click)="toggleMenu()"><a href="#usluge">Usluge</a></li>

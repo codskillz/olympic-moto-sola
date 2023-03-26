@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ONamaComponent } from './o-nama.component';
+import { PolarisComponent } from './polaris.component';
 
-describe('ONamaComponent', () => {
-  let component: ONamaComponent;
-  let fixture: ComponentFixture<ONamaComponent>;
+describe('PolarisComponent', () => {
+  let component: PolarisComponent;
+  let fixture: ComponentFixture<PolarisComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ONamaComponent]
+      declarations: [ PolarisComponent ]
     })
-      .compileComponents();
+    .compileComponents();
 
-    fixture = TestBed.createComponent(ONamaComponent);
+    fixture = TestBed.createComponent(PolarisComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

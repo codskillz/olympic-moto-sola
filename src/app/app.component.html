@@ -1,37 +1,7 @@
 <app-header></app-header>
 
-<div class="video-cover">
-    <video [autoplay]="true" [loop]="true" [muted]="true" *ngIf="video.src">
-        <source [src]="video.src" [type]="video.type">
-    </video>
-</div>
-
-<br><br>
-
-<app-o-nama></app-o-nama>
-
-<br><br>
-
-<div class="parallax img1"></div>
-
-<br><br>
-
-<app-dostupne-marke></app-dostupne-marke>
-
-<br><br>
-
-<div class="parallax img2"></div>
-
-<br><br>
-
-<app-usluge></app-usluge>
-
-<br><br>
-
-<div class="parallax img3"></div>
-
-<br><br>
-
-<app-kontakt></app-kontakt>
+<main>
+    <router-outlet></router-outlet>
+</main>
 
 <app-footer></app-footer>

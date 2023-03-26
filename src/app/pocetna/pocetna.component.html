@@ -1,0 +1,204 @@
+<div class="video-cover">
+    <video [autoplay]="true" [loop]="true" [muted]="true" *ngIf="video.src">
+        <source [src]="video.src" [type]="video.type">
+    </video>
+</div>
+
+<br><br>
+
+<div class="wrapper">
+    <section id="o-nama">
+        <div data-aos="fade" data-aos-once="true">
+            <h3 class="section-title">O nama</h3>
+            <span class="title-underline"></span>
+        </div>
+
+        <br>
+        <div class="wrapper">
+            <div class="image-text-container">
+                <div class="image" data-aos="fade-right" data-aos-duration="1500" data-aos-once="true">
+                    <img class="sola-img" src="assets/media/images/about-us/ivan-sola.jpg">
+                </div>
+                <span class="sola-text" data-aos="fade-left" data-aos-duration="1500" data-aos-once="true">
+                    <p>
+                        Osnivač firme je <i>Ivan Šola</i>, višestruki prvak i osvajač kupova u GP brzinskom
+                        motociklizmu,
+                        jedan od najpoznatijih sportaša na području <b><i>EX-YU</i></b> i <b>Hrvatske</b>. Dugogodišnja
+                        prisutnost
+                        na motociklističkoj sceni i poduzetnički duh rezultirao je otvaranjem <b>OLYMPIC MOTO Šola</b>
+                        trgovine
+                        i servisa. Publika pamti njegove odvažne nastupe pa tako i legendarno osvajanje prvenstva s
+                        otvorenim prijelomom ključne kosti. Jednostavno rečeno, <i>Ivan Šola</i> je ikona međunarodne
+                        moto
+                        scene.
+                    </p>
+                </span>
+            </div>
+
+            <br><br>
+
+            <div class="image-text-container">
+                <span class="sola-text" data-aos="fade-right" data-aos-duration="1500" data-aos-once="true">
+                    <p>
+                        <b>OLYMPIC MOTO ŠOLA d.o.o.</b> je glavni zastupnik <i>Indiana</i> za Splitsko-dalmatinsku
+                        županiju.
+                        Nalazi se na adresi Srijemska 8, u ulici nasuprot samoposlužne autopraonice blizu trgovačkog
+                        centra <b>Mall of Split</b>.
+                        Osim prodaje moto opreme i originalnih rezervnih dijelova, ovlašteni smo servis za sve
+                        <b>Kawasaki</b> proizvode (Jet-ski, quadove) kao i SYM skutere. Ponudu proširujemo sa
+                        elektro programom City COCO, Volta i dr. Osim ovlaštenih servisa nudimo brzu i povoljnu
+                        uslugu
+                        popravka svih
+                        vrsta motora i skutera uz garanciju. Glavni stručni tim mehaničara sastoji se od grupe ljudi
+                        koji su uz <i>Ivana Šolu</i> i
+                        njegov moto GP tim bili dugi niz godina.
+                    </p>
+                </span>
+                <div class="image" data-aos="fade-left" data-aos-duration="1500" data-aos-once="true">
+                    <img class="sola-img" src="assets/media/images/about-us/olympic_moto_sola-cover.jpeg">
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </section>
+</div>
+
+<br><br>
+
+<div class="parallax img1"></div>
+
+<br><br>
+
+<section id="motocikli">
+    <div data-aos="fade" data-aos-once="true">
+        <h3 class="section-title">Generalni zastupnik</h3>
+        <span class="title-underline"></span>
+    </div>
+
+    <br><br>
+
+    <div class="image-container" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
+        <div *ngFor="let image of markeImages" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
+            <img [src]="image.src" [alt]="image.alt" [ngClass]="image.class" *ngIf="image.alt==='Indian'"
+                [routerLink]="[image.route]">
+        </div>
+    </div>
+
+    <br><br>
+
+    <h3 class="section-title" data-aos="fade" data-aos-once="true">Prodaja i servis</h3>
+
+    <br><br>
+
+    <div class="image-container">
+        <div *ngFor="let image of markeImages" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
+            <img [src]="image.src" [alt]="image.alt" [ngClass]="image.class" [routerLink]="[image.route]"
+                *ngIf="image.alt==='Kawasaki' || image.alt==='Polaris'">
+        </div>
+    </div>
+
+    <br><br>
+
+    <h3 class="section-title" data-aos="fade" data-aos-once="true">Lorem ipsum dolor sit amet</h3>
+
+    <br><br>
+
+    <div class="image-container">
+        <div *ngFor="let image of markeImages" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
+            <img [src]="image.src" [alt]="image.alt" [ngClass]="image.class" [routerLink]="[image.route]"
+                *ngIf="image.alt==='Ducati' || image.alt==='MV Agusta'">
+        </div>
+    </div>
+
+    <br><br>
+</section>
+
+<br><br>
+
+<div class="parallax img2"></div>
+
+<br><br>
+
+<section id="usluge">
+    <h3 class="section-title" data-aos="fade" data-aos-once="true">Usluge</h3>
+    <span class="title-underline"></span>
+
+    <br><br><br><br>
+
+    <div class="image-container-usluge">
+        <div class="image-wrapper-usluge" *ngFor="let image of uslugeImages" data-aos="fade-right"
+            data-aos-duration="1500" data-aos-once="true">
+            <img [src]="image.src" [alt]="image.alt">
+            <div class="image-caption" [innerHtml]="image.caption"></div>
+        </div>
+    </div>
+</section>
+
+<br><br>
+
+<div class="parallax img3"></div>
+
+<br><br>
+
+<section id="kontakt">
+    <div data-aos="fade" data-aos-duration="1500" data-aos-once="true">
+        <h3 class="section-title">Kako do nas?</h3>
+        <span class="title-underline"></span>
+    </div>
+
+    <br>
+    <div class="wrapper-kontakt">
+        <div class="google-map" data-aos="fade-right" data-aos-duration="1500" data-aos-once="true">
+            <div style="width: 100%"><iframe width="900" height="433" frameborder="0" scrolling="no" marginheight="0"
+                    marginwidth="0"
+                    src="https://maps.google.com/maps?width=520&amp;height=433&amp;hl=en&amp;q=Srijemska%208,%20Split+(OLYMPIC%20MOTO%20%C5%A0ola)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                        href="https://www.maps.ie/distance-area-calculator.html">distance maps</a></iframe></div>
+        </div>
+
+        <div class="text-content" data-aos="fade-left" data-aos-duration="1500" data-aos-once="true">
+            <p>
+                Možete nas pronaći na adresi Srijemska 8, 21000 Split.<br>
+                Nalazimo se preko puta autopraonice nedaleko od trgovačkog
+                centra Mall of Split.
+            </p>
+            <br>
+            <p>
+                Sve upite vezano za poslovanje naše trgovine,<br>a i informacije o samom asortimanu,
+                možete saznati na:
+            </p>
+
+            <br>
+            <div class="image-text">
+                <img src="assets/media/images/kako-do-nas/location.png" alt="Location icon">
+                <p>Srijemska 8, 21000 Split</p>
+            </div>
+            <div class="image-text">
+                <img src="assets/media/images/kako-do-nas/telephone.png" alt="Telephone icon">
+                <p>+385 21 248 876</p>
+            </div>
+            <div class="image-text">
+                <img src="assets/media/images/kako-do-nas/mobile-phone.png" alt="Mobile phone icon">
+                <p>+385 91 540 6616</p>
+            </div>
+            <div class="image-text">
+                <img src="assets/media/images/kako-do-nas/mail.png" alt="E-mail icon">
+                <p><a href="mailto:info@kawasakisplit.hr"
+                        style="text-decoration: none; color: #333333;">info@kawasakisplit.hr</a></p>
+            </div>
+            <div class="image-text working-hours">
+                <img src="assets/media/images/kako-do-nas/working-hours.png" alt="Working hours icon">
+                <div class="paragraphs-working-hours">
+                    <p><strong>Radno vrijeme:</strong></p>
+                    <p>Ponedjeljak - Petak: 09:00 - 17:00</p>
+                    <p>Subota: 09:00 - 12:00</p>
+                    <p>Nedjelja: Ne radimo</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="go-to-map">
+            <a id="btn" href="https://tinyurl.com/moto-sola-location" target="_blank">Google Maps</a>
+        </div>
+    </div>
+    <br><br>
+</section>
