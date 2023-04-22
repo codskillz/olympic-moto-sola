@@ -1,3 +1,165 @@
-<br><br><br><br><br>
+<div class="wrapper">
+  <div class="slideshow">
+    <div class="background-image"
+      [ngStyle]="{ 'background-image': 'url(' + currentImage.src + ')', 'filter': 'blur(8px)' }"></div>
+    <div class="slide" *ngFor="let image of aboutImages; let i = index" [class.active]="i === currentIndex">
+      <img [src]="image.src" [alt]="image.caption" (click)="stopAutoPlay()">
+      <div class="caption">{{ image.caption }}</div>
+    </div>
 
-<h1>KAWASAKI</h1>
+    <div class="controls">
+      <button (click)="prevImage()">&#10094;</button>
+      <button (click)="nextImage()">&#10095;</button>
+    </div>
+  </div>
+
+  <br><br>
+
+  <section>
+    <h3 class="section-title">Povijest</h3>
+    <span class="title-underline"></span>
+
+    <br>
+
+    <p class="about-text">
+      <b>Kawasaki</b> je <i>japanska</i> javna multinacionalna korporacija proizvođač <i>motocikala</i>,
+      <i>motora</i>, <i>teške opreme</i>, <i>zrakoplovne</i>
+      i <i>obrambene opreme</i>, <i>željezničkih vozila</i> i <i>brodova</i>, sa sjedištem u Chūō, Kobe i Minato,
+      Tokio, Japan. Također se
+      bavi proizvodnjom industrijskih robota, plinskih turbina, pumpi, kotlova i drugih industrijskih proizvoda.
+      Tvrtka je dobila ime po svom osnivaču, <b>Shōzō Kawasakiju</b>. <br><br>
+      <b>Kawasaki's Aircraft Company</b> započela je razvoj motora za motocikle 1949. Razvoj je dovršen 1952., a
+      masovna proizvodnja započela je 1953. Motor je bio zračno hlađen, 148 cc, OHV, četverotaktni
+      jednocilindrični s maksimalnom snagom od 4 PS (2,9 kW; 3,9 KS) pri 4000 o/min. Godine 1954. proizveden je
+      prvi kompletan <b>Kawasaki</b> motocikl pod imenom <b>Meihatsu</b>, podružnica <b>Kawasaki Aircrafta</b>
+      Godine 1960. <b>Kawasaki</b> je završio izgradnju tvornice posvećene isključivo proizvodnji motocikala i
+      kupio <b>Meguro Motorcycles</b>. <br><br>
+      Kawasakijev prvi naslov bio je s Daveom Simmondsom 1969. kada su osvojili Svjetsko prvenstvo u kategoriji
+      125 cc. Kawasaki je dominirao u Grand Prix klasama 250 cc i 350 cc od 1978. do 1982. osvojivši četiri
+      naslova u svakoj kategoriji.
+
+      Uvođenjem <b>četverotaktnih</b> motora u MotoGP 2002. godine, <b>Kawasaki</b> je odlučio sudjelovati u novom
+      <b>MotoGP</b>
+      Svjetskom prvenstvu. <b>Kawasaki</b> je ušao u prvenstvo 2003. godine s timom <b>Eckl</b>, 250 cc Grand Prix
+      trkača
+      <i>Haralda Eckla</i>. <br><br>
+      <b>Kawasaki</b> je osvojio nekoliko prvenstava u utrkama supermotocikla. Osvojili su Svjetsko prvenstvo u
+      Superbikeu za vozače 1993. sa <i>Scottom Russellom</i>, dva desetljeća kasnije 2013. s <i>Tomom Sykesom</i> i šest
+      puta
+      uzastopno 2015., 2016., 2017., 2018., 2019. i 2020. s <i>Jonathanom Reom</i>. Proizvođač je također osvojio devet
+      naslova AMA Superbike prvenstva s vozačima kao što su <i>Reg Pridmore</i>, <i>Eddie Lawson</i>, <i>Wayne
+        Rainey</i>, <i>Scott
+        Russell</i> i <i>Doug Chandler</i>. Tijekom 1990-ih također su dominirali Svjetskim prvenstvom u izdržljivosti.
+    </p>
+    <br>
+  </section>
+
+  <section>
+    <h3 class="section-title">Vozni park</h3>
+    <span class="title-underline"></span>
+
+    <br>
+
+    <h3>Supersport</h3>
+
+    <div class="product-container">
+      <div class="product-item" *ngFor="let product of supersportProducts">
+        <img [src]="product.src" [alt]="product.name" (click)="openGallery(product)">
+        <div class="product-details">
+          <h2 class="product-name">{{ product.name }}</h2>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+
+    <h3>Supernaked</h3>
+
+    <div class="product-container">
+      <div class="product-item" *ngFor="let product of supernakedProducts">
+        <img [src]="product.src" [alt]="product.name" (click)="openGallery(product)">
+        <div class="product-details">
+          <h2 class="product-name">{{ product.name }}</h2>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+
+    <h3>Modern Classic</h3>
+
+    <div class="product-container">
+      <div class="product-item" *ngFor="let product of modernClassicProducts">
+        <img [src]="product.src" [alt]="product.name" (click)="openGallery(product)">
+        <div class="product-details">
+          <h2 class="product-name">{{ product.name }}</h2>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+
+    <h3>Urban Cruiser</h3>
+
+    <div class="product-container">
+      <div class="product-item" *ngFor="let product of urbanCruiserProducts">
+        <img [src]="product.src" [alt]="product.name" (click)="openGallery(product)">
+        <div class="product-details">
+          <h2 class="product-name">{{ product.name }}</h2>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+    
+    <h3>Adventure Tourer</h3>
+
+    <div class="product-container">
+      <div class="product-item" *ngFor="let product of adventureTourerProducts">
+        <img [src]="product.src" [alt]="product.name" (click)="openGallery(product)">
+        <div class="product-details">
+          <h2 class="product-name">{{ product.name }}</h2>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+    
+    <h3>Enduro</h3>
+
+    <div class="product-container">
+      <div class="product-item" *ngFor="let product of enduroProducts">
+        <img [src]="product.src" [alt]="product.name" (click)="openGallery(product)">
+        <div class="product-details">
+          <h2 class="product-name">{{ product.name }}</h2>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+
+    <h3>Motocross</h3>
+
+    <div class="product-container">
+      <div class="product-item" *ngFor="let product of motocrossProducts">
+        <img [src]="product.src" [alt]="product.name" (click)="openGallery(product)">
+        <div class="product-details">
+          <h2 class="product-name">{{ product.name }}</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- Galerija -->
+    <div class="gallery-container" *ngIf="isGalleryOpen" (click)="closeGallery()">
+      <div class="gallery-grid">
+        <div class="gallery-item" *ngFor="let image of selectedProductImages">
+          <a target="_blank" [href]="image">
+            <img [src]="image" [alt]="selectedProductName">
+          </a>
+        </div>
+      </div>
+      <span class="close-icon" (click)="closeGallery()">&times;</span>
+    </div>
+  </section>
+  <br><br>
+</div>

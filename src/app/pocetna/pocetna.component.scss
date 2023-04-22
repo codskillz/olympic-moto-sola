@@ -177,6 +177,10 @@ section {
     display: none;
 }
 
+.emails {
+    margin-left: 35px;
+}
+
 @media (min-aspect-ratio: 16/9) {
     .video-cover video {
         width: 100%;
@@ -198,7 +202,7 @@ section {
     }
 
     .video-cover video {
-        margin-top: 50px;
+        margin-top: 70px;
     }
 
     .sola-img {
@@ -220,7 +224,7 @@ section {
     }
 
     .sola-text p {
-        font-size: 15px;
+        font-size: 17px;
         text-align: justify;
     }
 
@@ -272,7 +276,7 @@ section {
 
     .image-caption {
         margin-top: 10px;
-        font-size: 16px;
+        font-size: 17px;
     }
 
     .image-wrapper-usluge img {
@@ -303,7 +307,7 @@ section {
 
     .image-text p {
         margin-left: 5px;
-        font-size: 14px;
+        font-size: 17px;
     }
 
     .image-text img {
@@ -340,6 +344,10 @@ section {
 
     .working-hours img {
         display: none;
+    }
+
+    .emails {
+        margin-left: 0;
     }
 
     $aos-distance: 200px; // It has to be above import
