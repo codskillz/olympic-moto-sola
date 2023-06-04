@@ -3,7 +3,7 @@
     <div class="background-image"
       [ngStyle]="{ 'background-image': 'url(' + currentImage.src + ')', 'filter': 'blur(8px)' }"></div>
     <div class="slide" *ngFor="let image of aboutImages; let i = index" [class.active]="i === currentIndex">
-      <img [src]="image.src" [alt]="image.caption" (click)="stopAutoPlay()">
+      <img [lazyLoad]="image.src" [alt]="image.caption" (click)="stopAutoPlay()">
       <div class="caption">{{ image.caption }}</div>
     </div>
 
@@ -21,7 +21,7 @@
 
     <br>
 
-    <p class="about-text">
+    <p class="about-text" data-aos="fade-right" data-aos-duration="1500" data-aos-once="true">
       <b>Kawasaki</b> je <i>japanska</i> javna multinacionalna korporacija proizvođač <i>motocikala</i>,
       <i>motora</i>, <i>teške opreme</i>, <i>zrakoplovne</i>
       i <i>obrambene opreme</i>, <i>željezničkih vozila</i> i <i>brodova</i>, sa sjedištem u Chūō, Kobe i Minato,
@@ -62,48 +62,57 @@
 
     <h3>Supersport</h3>
 
-    <div class="product-container">
+    <div class="product-container" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
       <div class="product-item" *ngFor="let product of supersportProducts">
-        <img [src]="product.src" [alt]="product.name" (click)="openGallery(product)">
+        <img [lazyLoad]="product.src" [alt]="product.name" (click)="openGallery(product)">
         <div class="product-details">
           <h2 class="product-name">{{ product.name }}</h2>
         </div>
       </div>
     </div>
+  </section>
 
-    <br><br>
+  <br><br>
+  <div class="parallax img1"></div>
+  <br><br>
+
+  <section>
 
     <h3>Supernaked</h3>
 
-    <div class="product-container">
+    <div class="product-container" data-aos="fade-out" data-aos-duration="1500" data-aos-once="true">
       <div class="product-item" *ngFor="let product of supernakedProducts">
-        <img [src]="product.src" [alt]="product.name" (click)="openGallery(product)">
+        <img [lazyLoad]="product.src" [alt]="product.name" (click)="openGallery(product)">
         <div class="product-details">
           <h2 class="product-name">{{ product.name }}</h2>
         </div>
       </div>
     </div>
 
-    <br><br>
+  </section>
+
+  <br><br>
+  <div class="parallax img2"></div>
+  <br><br>
+
+  <section>
 
     <h3>Modern Classic</h3>
 
-    <div class="product-container">
+    <div class="product-container" data-aos="fade-out" data-aos-duration="1500" data-aos-once="true">
       <div class="product-item" *ngFor="let product of modernClassicProducts">
-        <img [src]="product.src" [alt]="product.name" (click)="openGallery(product)">
+        <img [lazyLoad]="product.src" [alt]="product.name" (click)="openGallery(product)">
         <div class="product-details">
           <h2 class="product-name">{{ product.name }}</h2>
         </div>
       </div>
     </div>
-
-    <br><br>
 
     <h3>Urban Cruiser</h3>
 
-    <div class="product-container">
+    <div class="product-container" data-aos="fade-out" data-aos-duration="1500" data-aos-once="true">
       <div class="product-item" *ngFor="let product of urbanCruiserProducts">
-        <img [src]="product.src" [alt]="product.name" (click)="openGallery(product)">
+        <img [lazyLoad]="product.src" [alt]="product.name" (click)="openGallery(product)">
         <div class="product-details">
           <h2 class="product-name">{{ product.name }}</h2>
         </div>
@@ -111,25 +120,30 @@
     </div>
 
     <br><br>
-    
+
     <h3>Adventure Tourer</h3>
 
-    <div class="product-container">
+    <div class="product-container" data-aos="fade-out" data-aos-duration="1500" data-aos-once="true">
       <div class="product-item" *ngFor="let product of adventureTourerProducts">
-        <img [src]="product.src" [alt]="product.name" (click)="openGallery(product)">
+        <img [lazyLoad]="product.src" [alt]="product.name" (click)="openGallery(product)">
         <div class="product-details">
           <h2 class="product-name">{{ product.name }}</h2>
         </div>
       </div>
     </div>
 
-    <br><br>
-    
+  </section>
+
+  <br><br>
+  <div class="parallax img3"></div>
+  <br><br>
+
+  <section>
     <h3>Enduro</h3>
 
-    <div class="product-container">
+    <div class="product-container" data-aos="fade-in" data-aos-duration="1500" data-aos-once="true">
       <div class="product-item" *ngFor="let product of enduroProducts">
-        <img [src]="product.src" [alt]="product.name" (click)="openGallery(product)">
+        <img [lazyLoad]="product.src" [alt]="product.name" (click)="openGallery(product)">
         <div class="product-details">
           <h2 class="product-name">{{ product.name }}</h2>
         </div>
@@ -140,26 +154,26 @@
 
     <h3>Motocross</h3>
 
-    <div class="product-container">
+    <div class="product-container" data-aos="fade-in" data-aos-duration="1500" data-aos-once="true">
       <div class="product-item" *ngFor="let product of motocrossProducts">
-        <img [src]="product.src" [alt]="product.name" (click)="openGallery(product)">
+        <img [lazyLoad]="product.src" [alt]="product.name" (click)="openGallery(product)">
         <div class="product-details">
           <h2 class="product-name">{{ product.name }}</h2>
         </div>
       </div>
     </div>
-
     <!-- Galerija -->
     <div class="gallery-container" *ngIf="isGalleryOpen" (click)="closeGallery()">
       <div class="gallery-grid">
         <div class="gallery-item" *ngFor="let image of selectedProductImages">
           <a target="_blank" [href]="image">
-            <img [src]="image" [alt]="selectedProductName">
+            <img [lazyLoad]="image" [alt]="selectedProductName">
           </a>
         </div>
       </div>
       <span class="close-icon" (click)="closeGallery()">&times;</span>
     </div>
   </section>
+
   <br><br>
 </div>

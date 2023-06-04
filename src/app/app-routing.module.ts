@@ -14,11 +14,15 @@ const routes: Routes = [
   { path: 'pages/kawasaki', component: KawasakiComponent },
   { path: 'pages/polaris', component: PolarisComponent },
   { path: 'pages/ducati', component: DucatiComponent },
-  { path: 'pages/mv-agusta', component: MvAgustaComponent }
+  { path: 'pages/mv-agusta', component: MvAgustaComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'top',
+    }),
+  ],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

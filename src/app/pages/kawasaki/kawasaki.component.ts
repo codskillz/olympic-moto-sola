@@ -85,6 +85,7 @@ export class KawasakiComponent implements OnInit, OnDestroy {
       details: '',
       images: [
         '/assets/media/images/pages/kawasaki/products/supersport/ZX4RR/ZX-4RR_1.jpg',
+        '/assets/media/images/pages/kawasaki/products/supersport/ZX4RR/ZX-4RR_2.jpg',
       ],
     },
     {

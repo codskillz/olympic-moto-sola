@@ -145,7 +145,7 @@ img {
   font-weight: bold;
 }
 
-// POPUP
+/* POPUP */
 
 body.no-scroll {
   overflow: hidden;
@@ -214,6 +214,32 @@ body.no-scroll {
 
 ::-webkit-scrollbar-thumb {
   background: #888;
+}
+
+/* PARALLAX */
+
+.img1 {
+  background-image: url(/assets/media/images/fixed/moto-2.jpg);
+  min-height: 500px;
+}
+
+.img2 {
+  background-image: url(/assets/media/images/fixed/crew-2.jpg);
+  min-height: 500px;
+}
+
+.img3 {
+  background-image: url(/assets/media/images/fixed/formula-2.jpg);
+  min-height: 500px;
+}
+
+.parallax {
+  position: relative;
+  opacity: 0.7;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 

@@ -10,6 +10,10 @@ body {
     scroll-behavior: smooth;
 }
 
+html {
+    scroll-behavior: auto;
+}
+
 @media screen and (max-width: 912px) {
     section {
         padding: 0 2em 0 2em;

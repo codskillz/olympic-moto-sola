@@ -17,7 +17,7 @@
         <div class="wrapper">
             <div class="image-text-container">
                 <div class="image" data-aos="fade-right" data-aos-duration="1500" data-aos-once="true">
-                    <img class="sola-img" src="assets/media/images/about-us/ivan-sola.jpg" />
+                    <img class="sola-img" lazyLoad="assets/media/images/about-us/ivan-sola.jpg" />
                 </div>
                 <span class="sola-text" data-aos="fade-left" data-aos-duration="1500" data-aos-once="true">
                     <p>
@@ -52,7 +52,7 @@
                     </p>
                 </span>
                 <div class="image" data-aos="fade-left" data-aos-duration="1500" data-aos-once="true">
-                    <img class="sola-img" src="assets/media/images/about-us/olympic_moto_sola-cover.jpeg" />
+                    <img class="sola-img" lazyLoad="assets/media/images/about-us/olympic_moto_sola-cover.jpeg" />
                 </div>
             </div>
         </div>
@@ -76,7 +76,7 @@
 
     <div class="image-container" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
         <div *ngFor="let image of markeImages" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
-            <img [src]="image.src" [alt]="image.alt" [ngClass]="image.class" *ngIf="image.alt === 'Indian'"
+            <img [lazyLoad]="image.src" [alt]="image.alt" [ngClass]="image.class" *ngIf="image.alt === 'Indian'"
                 [routerLink]="[image.route]" />
         </div>
     </div>
@@ -91,7 +91,7 @@
 
     <div class="image-container">
         <div *ngFor="let image of markeImages" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
-            <img [src]="image.src" [alt]="image.alt" [ngClass]="image.class" [routerLink]="[image.route]"
+            <img [lazyLoad]="image.src" [alt]="image.alt" [ngClass]="image.class" [routerLink]="[image.route]"
                 *ngIf="image.alt === 'Kawasaki' || image.alt === 'Polaris'" />
         </div>
     </div>
@@ -100,7 +100,7 @@
 
     <div class="image-container">
         <div *ngFor="let image of markeImages" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
-            <img [src]="image.src" [alt]="image.alt" [ngClass]="image.class" [routerLink]="[image.route]"
+            <img [lazyLoad]="image.src" [alt]="image.alt" [ngClass]="image.class" [routerLink]="[image.route]"
                 *ngIf="image.alt === 'Ducati' || image.alt === 'MV Agusta'" />
         </div>
     </div>
@@ -123,7 +123,7 @@
     <div class="image-container-usluge">
         <div class="image-wrapper-usluge" *ngFor="let image of uslugeImages" data-aos="fade-right"
             data-aos-duration="1500" data-aos-once="true">
-            <img [src]="image.src" [alt]="image.alt" />
+            <img [lazyLoad]="image.src" [alt]="image.alt" />
             <div class="image-caption" [innerHtml]="image.caption"></div>
         </div>
     </div>

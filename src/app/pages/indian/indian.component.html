@@ -1,3 +1,151 @@
-<br><br><br><br><br>
+<div class="wrapper">
+    <div class="slideshow">
+        <div class="background-image"
+            [ngStyle]="{ 'background-image': 'url(' + currentImage.src + ')', 'filter': 'blur(8px)' }"></div>
+        <div class="slide" *ngFor="let image of aboutImages; let i = index" [class.active]="i === currentIndex">
+            <img [lazyLoad]="image.src" [alt]="image.caption" (click)="stopAutoPlay()">
+            <div class="caption">{{ image.caption }}</div>
+        </div>
 
-<h1>INDIAN</h1>
+        <div class="controls">
+            <button (click)="prevImage()">&#10094;</button>
+            <button (click)="nextImage()">&#10095;</button>
+        </div>
+    </div>
+
+    <br><br>
+
+    <section>
+        <h3 class="section-title">Povijest</h3>
+        <span class="title-underline"></span>
+
+        <br>
+
+        <p class="about-text" data-aos="fade-right" data-aos-duration="1500" data-aos-once="true">
+            Indian Motorcycle (ili Indian) je američka marka motocikala u vlasništvu i proizvodnji američkog proizvođača
+            automobila Polaris Inc.
+
+            Izvorno proizveden od 1901. do 1953. u Springfieldu, Massachusetts, Sjedinjene Države, Hendee Manufacturing
+            Company u početku je proizvodila motocikle, ali je ime promijenjeno u Indian Motocycle Company 1923.
+            Godine 2011. Polaris Industries kupio je indijsku marku motocikala i preselio operacije iz Sjeverne Karoline
+            te ih spojio s postojećim pogonima u Minnesoti i Iowi. Od kolovoza 2013. Polaris je dizajnirao, konstruirao
+            i proizveo više linija motocikala pod brendom Indian Motorcycle koji odražavaju indijski tradicionalni stil.
+            Momčad tvornice indijskih motocikala zauzela je prva tri mjesta na turniru Isle of Man Tourist Trophy 1911.
+            godine. Tijekom 1910-ih, Indian Motorcycle je postao najveći proizvođač motocikala na svijetu.
+            Najpopularniji modeli Indian Motorcycle bili su Scout, koji se proizvodio od 1920. do 1946., i Chief, koji
+            se proizvodio od 1922. do 1953., kada je tvrtka Indian Motorcycle Manufacturing Company bankrotirala.
+            Različite organizacije pokušale su ovjekovječiti ime marke Indian Motorcycle u narednim godinama, s
+            ograničenim uspjehom.<br><br>
+            Uspjeh na natjecanju odigrao je veliku ulogu u brzom rastu Indiana i potaknuo je i tehničke inovacije. Jedan
+            od najboljih ranih rezultata američke tvrtke postignut je na Isle of Man TT 1911., kada su indijski jahači
+            Oliver Cyril Godfrey, Franklin i Moorehouse završili prvi, drugi i treći. Indijska zvijezda Jake DeRosier
+            postavio je nekoliko brzinskih rekorda, kako u Americi, tako iu Brooklandsu u Britaniji, te je osvojio oko
+            900 utrka na zemljanim i daskanim stazama. Napustio je Indian za Excelsior i umro 1913., u dobi od 33
+            godine, od ozljeda zadobivenih u nesreći na utrci na dasci s Charlesom "Neustrašivim" Balkeom, koji je
+            kasnije postao najbolji indijski vozač. Rad u indijskoj tvornici je zaustavljen dok je prolazila DeRosierova
+            pogrebna povorka.<br><br>
+            Scout je predstavljen 1920. Dizajniran od strane Charlesa B. Franklina, Scout je imao mjenjač pričvršćen
+            vijcima za motor i pokretan je zupčanicima umjesto remenom ili lancem. Motor je izvorno zapremio 37 cu
+            in (610 cc); Scout 45, s obujmom od 45 cu in (kubični inč) (740 cc), postao je dostupan 1927. kako bi se
+            natjecao s
+            Excelsior Super X. Prednja kočnica je postala standard na originalnom Scoutu početkom 1928.
+
+            Godine 1928. Scout i Scout 45 zamijenjeni su modelom 101 Scout. Još jedan Franklinov dizajn, 101 Scout imao
+            je duži međuosovinski razmak i nižu visinu sjedala od originala. 101 Scout bio je poznat po svom
+            upravljanju.
+
+            101 Scout je zamijenjen Standard Scoutom za 1932. Standard Scout je dijelio svoj okvir s Chiefom i Four; kao
+            rezultat toga, Standard Scout je bio teži i manje okretan od 101.<br><br>
+        </p>
+        <br>
+    </section>
+
+    <section>
+        <h3 class="section-title">Vozni park</h3>
+        <span class="title-underline"></span>
+
+        <br>
+
+        <h3>Scout</h3>
+
+        <div class="product-container" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
+            <div class="product-item" *ngFor="let product of scoutProducts">
+                <img [lazyLoad]="product.src" [alt]="product.name" (click)="openGallery(product)">
+                <div class="product-details">
+                    <h2 class="product-name">{{ product.name }}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br><br>
+    <div class="parallax img1"></div>
+    <br><br>
+
+    <section>
+        <h3>FTR</h3>
+
+        <div class="product-container" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
+            <div class="product-item" *ngFor="let product of ftrProducts">
+                <img [lazyLoad]="product.src" [alt]="product.name" (click)="openGallery(product)">
+                <div class="product-details">
+                    <h2 class="product-name">{{ product.name }}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h3>Cruiser</h3>
+
+        <div class="product-container" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
+            <div class="product-item" *ngFor="let product of cruiserProducts">
+                <img [lazyLoad]="product.src" [alt]="product.name" (click)="openGallery(product)">
+                <div class="product-details">
+                    <h2 class="product-name">{{ product.name }}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <div class="parallax img2"></div>
+    <br><br>
+
+    <section>
+        <h3>Bagger</h3>
+
+        <div class="product-container" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
+            <div class="product-item" *ngFor="let product of baggerProducts">
+                <img [lazyLoad]="product.src" [alt]="product.name" (click)="openGallery(product)">
+                <div class="product-details">
+                    <h2 class="product-name">{{ product.name }}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h3>Touring</h3>
+
+        <div class="product-container" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
+            <div class="product-item" *ngFor="let product of touringProducts">
+                <img [lazyLoad]="product.src" [alt]="product.name" (click)="openGallery(product)">
+                <div class="product-details">
+                    <h2 class="product-name">{{ product.name }}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br><br>
+
+    <!-- Galerija -->
+    <div class="gallery-container" *ngIf="isGalleryOpen" (click)="closeGallery()">
+        <div class="gallery-grid">
+            <div class="gallery-item" *ngFor="let image of selectedProductImages">
+                <a target="_blank" [href]="image">
+                    <img [lazyLoad]="image" [alt]="selectedProductName">
+                </a>
+            </div>
+        </div>
+        <span class="close-icon" (click)="closeGallery()">&times;</span>
+    </div>
+</div>
