@@ -1,3 +1,207 @@
-<br><br><br><br><br>
+<div class="wrapper">
+    <div class="slideshow">
+        <div class="background-image"
+            [ngStyle]="{ 'background-image': 'url(' + currentImage.src + ')', 'filter': 'blur(8px)' }"></div>
+        <div class="slide" *ngFor="let image of aboutImages; let i = index" [class.active]="i === currentIndex">
+            <img [lazyLoad]="image.src" [alt]="image.caption" (click)="stopAutoPlay()">
+            <div class="caption">{{ image.caption }}</div>
+        </div>
 
-<h1>DUCATI</h1>
+        <div class="controls">
+            <button (click)="prevImage()">&#10094;</button>
+            <button (click)="nextImage()">&#10095;</button>
+        </div>
+    </div>
+
+    <br><br>
+
+    <section>
+        <h3 class="section-title">Povijest</h3>
+        <span class="title-underline"></span>
+
+        <br>
+
+        <p class="about-text" data-aos="fade-right" data-aos-duration="1500" data-aos-once="true">
+            Ducati je počeo kao mala privatna tvrtka 1920. godine koja je proizvodila kućna električna pomagala.
+
+            Godine 1945. je proizvela prvi motocikl (CUCCIOLO) što bi prevedeno s talijanskog na hrvatski značilo (malo
+            štene) a pokretao ga je pogonski agregat skromnih dimenzija od 48 kubičnih centimetara četverotaktne
+            koncepcije. <br><br>
+
+            Godina 1946. je godina kada Ducati počinje s proizvodnjom motocikala i kada je Cucciolo postigao uspjeh na
+            tržistu. <br><br>
+
+            Proizvodnja se nastavlja a 1954. godine Inžinjer Fabio Taglioni dolazi u Ducati kao glavni dizajner
+            (konstruktor) te zatim slijedi njegov prvi uradak Gran Sport Single (jednocilindrični agregat) nadimkom
+            Marianna, koji je postizao maksimalnu brzinu do 136 km/h, kubikaže 98 centimetara kubičnih a kasnije se s
+            njime vozio i Giro di Italia.
+
+            Kad se kubikaža povećala na 124,5 centimetara kubičnih počele su se proizvoditi razne verzije raznih
+            kubikaža toga modela. <br><br>
+
+            1970. godine Taglioni dobiva zeleno svjetlo da dizajnira novi dvocilindrični agregat L konepcije i rezultat
+            je prvi dvocilindrični GT model 1971. godine kubikaže 748 cc. <br><br>
+
+            Poznati vozači koji su vozili te prve strojeve su: Mike Hailwood, Paul Smart, Bruno Spaggiari, Benjamin
+            Grau, Salvador Canellas, itd pa sve do danas aktualnog Svjetskog prvaka u Grand Prixu, Australca, Caseya
+            Stonera i njegovog kolege, Talijana Lorisa Capirossia, te Britanca Carla Fogartya iz Superbikea i
+            Australskog dvojca također iz Superbikea, Troya Baylissa i Troya Corsera.
+
+            Sjedište Tvrtke Ducati je danas smješteno u Italiji u Bologni (Borgo Panigale) a najveća tržišta na kojima
+            Ducati ostvaruje prodaju su SAD, Europa i Australija.
+
+            Ducati je jedna od zaista rijetkih tvrtki koja ima na internetu svoj blog odnosno Desmoblog, na kojem se svi
+            vlasnici i potencijalni vlasnici ovih sjajnih Talijanskih tradicionalnih proizvoda mogu obratiti neposredno
+            direktoru firme sa svojim prijedlozima, problemina, komentarima i pitanjima. <br><br>
+
+            Ducatijeva tvornica se može obići i razgledati turistički, skoro u cijelosti, što je još jedna od rijetkih
+            mogućnosti u svijetu motociklizma.
+
+            Ducati ima i svoj tjedan u mjesecu srpnju (Ducati Desmo Week) u kojem se svi ponosni vlasnici sastaju te
+            organizirano voze po stazi za utrke s instruktorima vožnje i slave uz zabavne programe.
+        </p>
+        <br>
+    </section>
+
+    <section>
+        <h3 class="section-title">Vozni park</h3>
+        <span class="title-underline"></span>
+
+        <h3>Scrambler</h3>
+
+        <div class="product-container" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
+            <div class="product-item" *ngFor="let product of scramblerProducts">
+                <img [lazyLoad]="product.src" [alt]="product.name" (click)="openGallery(product)">
+                <div class="product-details">
+                    <h2 class="product-name">{{ product.name }}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>XDiavel</h3>
+
+        <div class="product-container" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
+            <div class="product-item" *ngFor="let product of xDiavelProducts">
+                <img [lazyLoad]="product.src" [alt]="product.name" (click)="openGallery(product)">
+                <div class="product-details">
+                    <h2 class="product-name">{{ product.name }}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Hypermotard</h3>
+
+        <div class="product-container" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
+            <div class="product-item" *ngFor="let product of hyperMotardProducts">
+                <img [lazyLoad]="product.src" [alt]="product.name" (click)="openGallery(product)">
+                <div class="product-details">
+                    <h2 class="product-name">{{ product.name }}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br><br>
+    <div class="parallax img1"></div>
+    <br><br>
+
+    <section>
+        <h3>Streetfighter</h3>
+
+        <div class="product-container" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
+            <div class="product-item" *ngFor="let product of streetfigtherProducts">
+                <img [lazyLoad]="product.src" [alt]="product.name" (click)="openGallery(product)">
+                <div class="product-details">
+                    <h2 class="product-name">{{ product.name }}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Monster</h3>
+
+        <div class="product-container" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
+            <div class="product-item" *ngFor="let product of monsterProducts">
+                <img [lazyLoad]="product.src" [alt]="product.name" (click)="openGallery(product)">
+                <div class="product-details">
+                    <h2 class="product-name">{{ product.name }}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Multistrada</h3>
+
+        <div class="product-container" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
+            <div class="product-item" *ngFor="let product of multistradaProducts">
+                <img [lazyLoad]="product.src" [alt]="product.name" (click)="openGallery(product)">
+                <div class="product-details">
+                    <h2 class="product-name">{{ product.name }}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br><br>
+    <div class="parallax img2"></div>
+    <br><br>
+
+    <section>
+        <h3>Diavel</h3>
+
+        <div class="product-container" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
+            <div class="product-item" *ngFor="let product of diavelProducts">
+                <img [lazyLoad]="product.src" [alt]="product.name" (click)="openGallery(product)">
+                <div class="product-details">
+                    <h2 class="product-name">{{ product.name }}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Panigale</h3>
+
+        <div class="product-container" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
+            <div class="product-item" *ngFor="let product of panigaleProducts">
+                <img [lazyLoad]="product.src" [alt]="product.name" (click)="openGallery(product)">
+                <div class="product-details">
+                    <h2 class="product-name">{{ product.name }}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Supersport</h3>
+
+        <div class="product-container" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
+            <div class="product-item" *ngFor="let product of supersportProducts">
+                <img [lazyLoad]="product.src" [alt]="product.name" (click)="openGallery(product)">
+                <div class="product-details">
+                    <h2 class="product-name">{{ product.name }}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br><br>
+
+    <!-- Galerija -->
+    <div class="gallery-container" *ngIf="isGalleryOpen" (click)="closeGallery()">
+        <div class="gallery-grid">
+            <div class="gallery-item" *ngFor="let image of selectedProductImages">
+                <a target="_blank" [href]="image">
+                    <img [lazyLoad]="image" [alt]="selectedProductName">
+                </a>
+            </div>
+        </div>
+        <span class="close-icon" (click)="closeGallery()">&times;</span>
+    </div>
+</div>
