@@ -1,3 +1,147 @@
-<br><br><br><br><br>
+<div class="wrapper">
+    <div class="slideshow">
+        <div class="background-image"
+            [ngStyle]="{ 'background-image': 'url(' + currentImage.src + ')', 'filter': 'blur(8px)' }"></div>
+        <div class="slide" *ngFor="let image of aboutImages; let i = index" [class.active]="i === currentIndex">
+            <img [lazyLoad]="image.src" [alt]="image.caption" (click)="stopAutoPlay()">
+            <div class="caption">{{ image.caption }}</div>
+        </div>
 
-<h1>POLARIS</h1>
+        <div class="controls">
+            <button (click)="prevImage()">&#10094;</button>
+            <button (click)="nextImage()">&#10095;</button>
+        </div>
+    </div>
+
+    <br><br>
+
+    <section>
+        <h3 class="section-title">Povijest</h3>
+        <span class="title-underline"></span>
+
+        <br>
+
+        <p class="about-text" data-aos="fade-right" data-aos-duration="1500" data-aos-once="true">
+            Polaris je američka tvrtka koja je postala poznata po proizvodnji motocikala, ATV-a (All-Terrain Vehicles),
+            snježnih vozila i ostalih vozila na sva četiri kotača. Tvrtka je osnovana 1954. godine u Roseauu, u saveznoj
+            državi Minnesota.<br><br>
+
+            Povijest Polaris Industriesa započela je kao tvrtka za proizvodnju pobjedničkih motocikala za snijeg. 1956.
+            godine, Polaris je stvorio prvi motocikl za snijeg s modernim trakama, koji je omogućavao vožnju po snježnim
+            terenima. Tijekom godina, tvrtka je nastavila razvijati svoju tehnologiju i proširila se na proizvodnju
+            drugih vozila na sva četiri kotača. <br><br>
+
+            Ranih 1980-ih, Polaris je proširio svoju liniju proizvoda na ATV-ove, popularne terenske vozove koji su
+            pružali svestranost i zabavu vozačima izvan cesta. Polaris je bio inovator u ATV industriji, uvodeći nove
+            tehnologije i poboljšanja u performansama, sigurnosti i udobnosti. Njihovi modeli poput Sportsmana, RZR-a i
+            Rangera postali su izuzetno popularni među ljubiteljima terenskih vozila. <br><br>
+
+            Polaris je također proširio svoje poslovanje na proizvodnju električnih vozila. 2011. godine, predstavili su
+            prvi potpuno električni ATV, a 2015. godine, lansirali su prvi potpuno električni motocikl s cestovnim
+            dozvolama nazvan Brammo Empulse. <br><br>
+
+            Uz proizvodnju vozila, Polaris je također razvio širok spektar dodatne opreme i proizvoda za ljubitelje
+            aktivnosti na otvorenom. Oni proizvode dodatnu opremu poput snježnih plugova, prikolica, kaciga i odjeće.
+            Polaris je tijekom godina postao prepoznatljiva marka u industriji terenskih vozila i motocikala. Tvrtka je
+            kontinuirano ulagala u istraživanje i razvoj novih tehnologija kako bi unaprijedila performanse, sigurnost i
+            održivost svojih proizvoda. <br><br>
+
+            Danas, Polaris Industries nastavlja biti jedan od vodećih svjetskih proizvođača motocikala, ATV-a, snježnih
+            vozila i ostalih vozila na sva četiri kotača. Njihova vozila se koriste u raznim industrijskim sektorima,
+            poput poljoprivrede, šumarstva, vojnih operacija, rekreativnih aktivnosti i mnogim drugima.<br><br>
+        </p>
+        <br>
+    </section>
+
+    <section>
+        <h3 class="section-title">Vozni park</h3>
+        <span class="title-underline"></span>
+
+        <h3>SPORTSMAN Modeli</h3>
+
+        <div class="product-container" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
+            <div class="product-item" *ngFor="let product of sportsmanProducts">
+                <img [lazyLoad]="product.src" [alt]="product.name" (click)="openGallery(product)">
+                <div class="product-details">
+                    <h2 class="product-name">{{ product.name }}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br>
+
+    <section>
+        <h3>XPEDITION Modeli</h3>
+
+        <div class="product-container" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
+            <div class="product-item" *ngFor="let product of xpeditionProducts">
+                <img [lazyLoad]="product.src" [alt]="product.name" (click)="openGallery(product)">
+                <div class="product-details">
+                    <h2 class="product-name">{{ product.name }}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br>
+
+    <section>
+        <h3>GENERAL Modeli</h3>
+
+        <div class="product-container" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
+            <div class="product-item" *ngFor="let product of generalProducts">
+                <img [lazyLoad]="product.src" [alt]="product.name" (click)="openGallery(product)">
+                <div class="product-details">
+                    <h2 class="product-name">{{ product.name }}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br><br>
+    <div class="parallax img1"></div>
+    <br><br>
+
+    <section>
+        <h3>RANGER Modeli</h3>
+
+        <div class="product-container" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
+            <div class="product-item" *ngFor="let product of rangerProducts">
+                <img [lazyLoad]="product.src" [alt]="product.name" (click)="openGallery(product)">
+                <div class="product-details">
+                    <h2 class="product-name">{{ product.name }}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br>
+
+    <section>
+        <h3>RZR Modeli</h3>
+
+        <div class="product-container" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
+            <div class="product-item" *ngFor="let product of rzrProducts">
+                <img [lazyLoad]="product.src" [alt]="product.name" (click)="openGallery(product)">
+                <div class="product-details">
+                    <h2 class="product-name">{{ product.name }}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br><br>
+
+    <!-- Galerija -->
+    <div class="gallery-container" *ngIf="isGalleryOpen" (click)="closeGallery()">
+        <div class="gallery-grid">
+            <div class="gallery-item" *ngFor="let image of selectedProductImages">
+                <a target="_blank" [href]="image">
+                    <img [lazyLoad]="image" [alt]="selectedProductName">
+                </a>
+            </div>
+        </div>
+        <span class="close-icon" (click)="closeGallery()">&times;</span>
+    </div>
+</div>
