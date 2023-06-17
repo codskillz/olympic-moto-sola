@@ -1,3 +1,223 @@
-<br><br><br><br><br>
+<div class="wrapper">
+  <div class="slideshow">
+    <div
+      class="background-image"
+      [ngStyle]="{
+        'background-image': 'url(' + currentImage.src + ')',
+        filter: 'blur(8px)'
+      }"
+    ></div>
+    <div
+      class="slide"
+      *ngFor="let image of aboutImages; let i = index"
+      [class.active]="i === currentIndex"
+    >
+      <img
+        [lazyLoad]="image.src"
+        [alt]="image.caption"
+        (click)="stopAutoPlay()"
+      />
+      <div class="caption">{{ image.caption }}</div>
+    </div>
 
-<h1>MVAGUSTA</h1>
+    <div class="controls">
+      <button (click)="prevImage()">&#10094;</button>
+      <button (click)="nextImage()">&#10095;</button>
+    </div>
+  </div>
+
+  <br /><br />
+
+  <section>
+    <h3 class="section-title">Povijest</h3>
+    <span class="title-underline"></span>
+    <img
+      src="assets/media/images/logotipi/mv-agusta-logo.png"
+      alt="MV Agusta logo"
+      class="section-img"
+    />
+    <br />
+
+    <p
+      class="about-text"
+      data-aos="fade-right"
+      data-aos-duration="1500"
+      data-aos-once="true"
+    >
+      MV Agusta je prestižni italijanski proizvođač motocikala s bogatom
+      poviješću i naslijeđem. Tvrtka je osnovana 1945. godine u Cascini Costa,
+      Italija, od strane legendarnog inženjera i motociklističkog trkača,
+      Giovannija Agostinija. <br /><br />
+
+      MV Agusta je poznata po svojim visokokvalitetnim, sportskim motociklima
+      koji su postali sinonim za <b>eleganciju</b>, <b>performanse</b> i
+      <b>tehnološki napredak</b>. Njihovi motocikli su ručno izrađeni u malim
+      serijama, što dodatno naglašava njihovu <b>ekskluzivnost</b>. <br /><br />
+
+      Od samih početaka, MV Agusta je bio prisutan u motociklističkim
+      natjecanjima, postižući iznimne uspjehe. Osvojili su brojne naslove
+      svjetskih prvaka u MotoGP-u, Svjetskom Superbike prvenstvu i drugim
+      prestižnim utrkama diljem svijeta. Motocikli MV Aguste prepoznatljivi su
+      po svojoj <b>agresivnoj estetici</b>, izvrsnoj <b>aerodinamici</b> i
+      impresivnim <b>performansama</b>. <br /><br />
+
+      U svojoj povijesti, MV Agusta je prošla kroz nekoliko promjena vlasništva,
+      ali je uvijek ostala posvećena proizvodnji visokokvalitetnih motocikala.
+      Danas, tvrtka proizvodi široku paletu motocikala, uključujući modele u
+      kategorijama <b>supersporta</b>, <b>nakeda</b>, <b>touringa</b> i
+      <b>kruizera</b>. Njihovi motocikli su poznati po upotrebi vrhunskih
+      materijala, naprednih tehnologija i ručno izrađenih detalja. <br /><br />
+
+      MV Agusta ne samo da se ističe tehničkom izvrsnošću i performansama, već i
+      svojim <i>dizajnom</i>. Njihovi motocikli su remek-djela estetike, sa
+      sofisticiranim linijama, pažljivo oblikovanim detaljima i vrhunskom
+      završnom obradom. <br /><br />
+
+      Unatoč tome što je mala tvrtka u usporedbi s nekim drugim proizvođačima,
+      MV Agusta ima veliku bazu obožavatelja diljem svijeta. Njihovi motocikli
+      privlače ljude koji cijene iznimne performanse, ekskluzivnost i stil.
+      <br /><br />
+
+      MV Agusta je jedan od najpoznatijih i najprestižnijih talijanskih
+      proizvođača motocikala, s uspješnom poviješću i kontinuiranim fokusom na
+      inovacije i kvalitetu. Njihovi motocikli su simbol strasti i ljubavi prema
+      motociklima, te nastavljaju privlačiti vozače širom svijeta.
+    </p>
+    <br />
+  </section>
+
+  <section>
+    <h3 class="section-title">Vozni park</h3>
+    <span class="title-underline"></span>
+
+    <h3>Brutale</h3>
+
+    <div
+      class="product-container"
+      data-aos="zoom-in"
+      data-aos-duration="1500"
+      data-aos-once="true"
+    >
+      <div class="product-item" *ngFor="let product of brutaleProducts">
+        <img
+          [lazyLoad]="product.src"
+          [alt]="product.name"
+          (click)="openGallery(product)"
+        />
+        <div class="product-details">
+          <h2 class="product-name">{{ product.name }}</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h3>Dragster</h3>
+
+    <div
+      class="product-container"
+      data-aos="zoom-in"
+      data-aos-duration="1500"
+      data-aos-once="true"
+    >
+      <div class="product-item" *ngFor="let product of dragsterProducts">
+        <img
+          [lazyLoad]="product.src"
+          [alt]="product.name"
+          (click)="openGallery(product)"
+        />
+        <div class="product-details">
+          <h2 class="product-name">{{ product.name }}</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br /><br />
+  <div class="parallax img1"></div>
+  <br /><br />
+
+  <section>
+    <h3>Turismo Veloce</h3>
+
+    <div
+      class="product-container"
+      data-aos="zoom-in"
+      data-aos-duration="1500"
+      data-aos-once="true"
+    >
+      <div class="product-item" *ngFor="let product of turismoVeloceProducts">
+        <img
+          [lazyLoad]="product.src"
+          [alt]="product.name"
+          (click)="openGallery(product)"
+        />
+        <div class="product-details">
+          <h2 class="product-name">{{ product.name }}</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br /><br />
+  <div class="parallax img2"></div>
+  <br /><br />
+
+  <section>
+    <h3>F3</h3>
+
+    <div
+      class="product-container"
+      data-aos="zoom-in"
+      data-aos-duration="1500"
+      data-aos-once="true"
+    >
+      <div class="product-item" *ngFor="let product of f3Products">
+        <img
+          [lazyLoad]="product.src"
+          [alt]="product.name"
+          (click)="openGallery(product)"
+        />
+        <div class="product-details">
+          <h2 class="product-name">{{ product.name }}</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h3>Superveloce</h3>
+
+    <div
+      class="product-container"
+      data-aos="zoom-in"
+      data-aos-duration="1500"
+      data-aos-once="true"
+    >
+      <div class="product-item" *ngFor="let product of superveloceProducts">
+        <img
+          [lazyLoad]="product.src"
+          [alt]="product.name"
+          (click)="openGallery(product)"
+        />
+        <div class="product-details">
+          <h2 class="product-name">{{ product.name }}</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br /><br />
+
+  <!-- Galerija -->
+  <div class="gallery-container" *ngIf="isGalleryOpen" (click)="closeGallery()">
+    <div class="gallery-grid">
+      <div class="gallery-item" *ngFor="let image of selectedProductImages">
+        <a target="_blank" [href]="image">
+          <img [lazyLoad]="image" [alt]="selectedProductName" />
+        </a>
+      </div>
+    </div>
+    <span class="close-icon" (click)="closeGallery()">&times;</span>
+  </div>
+</div>

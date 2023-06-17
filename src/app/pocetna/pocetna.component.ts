@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-pocetna',
   templateUrl: './pocetna.component.html',
   styleUrls: ['./pocetna.component.scss'],
 })
-export class PocetnaComponent {
+export class PocetnaComponent implements OnInit {
   video = {
     src: 'assets/media/cover-video.mp4',
     type: 'video/mp4',
@@ -62,4 +62,8 @@ export class PocetnaComponent {
       caption: '<p>Servis <b>Jet Ski-eva</b> svih marki</p>',
     },
   ];
+
+  constructor() {}
+
+  ngOnInit(): void {}
 }

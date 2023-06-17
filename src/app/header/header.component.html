@@ -1,29 +1,32 @@
 <header ngxHideOnScroll [classNameWhenHidden]="'nav-hidden'">
-    <nav>
-        <div class="logo">
-            <a [routerLink]="['']"><img src="assets/media/images/olympic-moto-sola-logo-transparent.png">
-            </a>
+  <nav>
+    <div class="logo">
+      <a [routerLink]="['']"
+        ><img
+          src="assets/media/images/olympic-moto-sola-logo-transparent.png"
+        />
+      </a>
+    </div>
+    <div class="hamburger" (click)="toggleMenu()">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <ul class="menu">
+      <li (click)="toggleMenu()"><a href="#">Početna</a></li>
+      <li (click)="toggleMenu()"><a href="#o-nama">O nama</a></li>
+      <div class="dropdown">
+        <li (click)="toggleMenu()"><a href="#motocikli">Motocikli</a></li>
+        <div class="dropdown-content dropdown-animation">
+          <a routerLink="pages/indian" id="drop-indian">Indian</a>
+          <a routerLink="pages/kawasaki" id="drop-kawa">Kawasaki</a>
+          <a routerLink="pages/polaris" id="drop-polaris">Polaris</a>
+          <a routerLink="pages/ducati" id="drop-ducati">Ducati</a>
+          <a routerLink="pages/mv-agusta" id="drop-mv-agusta">MV Agusta</a>
         </div>
-        <div class="hamburger" (click)="toggleMenu()">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-        <ul class="menu">
-            <li (click)="toggleMenu()"><a href="#">Početna</a></li>
-            <li (click)="toggleMenu()"><a href="#o-nama">O nama</a></li>
-            <div class="dropdown">
-                <li (click)="toggleMenu()"><a href="#motocikli">Motocikli</a></li>
-                <div class="dropdown-content dropdown-animation">
-                    <a routerLink="pages/indian" id="drop-indian">Indian</a>
-                    <a routerLink="pages/kawasaki" id="drop-kawa">Kawasaki</a>
-                    <a routerLink="pages/polaris" id="drop-polaris">Polaris</a>
-                    <a routerLink="pages/ducati" id="drop-ducati">Ducati</a>
-                    <a routerLink="pages/mv-agusta" id="drop-mv-agusta">MV Agusta</a>
-                </div>
-            </div>
-            <li (click)="toggleMenu()"><a href="#usluge">Usluge</a></li>
-            <li (click)="toggleMenu()"><a href="#kontakt">Kontakt</a></li>
-        </ul>
-    </nav>
+      </div>
+      <li (click)="toggleMenu()"><a href="#usluge">Usluge</a></li>
+      <li (click)="toggleMenu()"><a href="#kontakt">Kontakt</a></li>
+    </ul>
+  </nav>
 </header>

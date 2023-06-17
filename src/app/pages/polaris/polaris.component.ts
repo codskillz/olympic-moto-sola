@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-polaris',
   templateUrl: './polaris.component.html',
   styleUrls: ['./polaris.component.scss'],
 })
-export class PolarisComponent implements OnInit {
+export class PolarisComponent implements OnInit, OnDestroy {
   aboutImages: any[] = [
     {
       src: 'assets/media/images/pages/polaris/slideshow/polaris_snow_traveler_1965.jpg',
