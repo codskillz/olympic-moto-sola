@@ -3,10 +3,11 @@
     [autoplay]="true"
     [loop]="true"
     [muted]="true"
-    *ngIf="video.src"
+    *ngIf="video.src || video2.src"
     playsinline
   >
     <source [src]="video.src" [type]="video.type" />
+    <source [src]="video2.src" [type]="video2.type" />
   </video>
 </div>
 
