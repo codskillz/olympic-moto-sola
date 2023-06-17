@@ -1,21 +1,22 @@
 section {
-    padding: 0 5em 0 5em;
+    padding: 0 5em;
 }
 
 .video-cover video {
     position: relative;
     display: block;
-    object-fit: contain;
-    height: 100%;
+    object-fit: cover;
+    max-height: 100%;
     visibility: visible;
     overflow-clip-margin: content-box;
-    overflow: clip;
+    overflow: hidden;
     max-width: 100%;
     top: 0;
     bottom: 0;
     overflow-x: hidden;
     z-index: -1;
 }
+
 
 .img1 {
     background-image: url(/assets/media/images/fixed/moto-1.jpg);
@@ -64,8 +65,7 @@ section {
     -webkit-box-shadow: 22px 22px 3px -1px #6f6344;
     -moz-box-shadow: 22px 22px 3px -1px #6f6344;
     box-shadow: 22px 22px 3px -1px #6f6344;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin: 0 50px;
 }
 
 .image-text-container {
@@ -75,19 +75,14 @@ section {
     align-items: center;
 }
 
-.sola-text p {
+.sola-text {
     font-size: 20px;
     text-align: justify;
-}
-
-.sola-text {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0 20px;
 }
 
 .wrapper {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 0 50px;
 }
 
 .image-container {
@@ -197,6 +192,9 @@ section {
 }
 
 @media screen and (max-width: 1143px) {
+    section {
+        padding: 0 2em;
+    }
 
     .video-cover video {
         margin-top: 70px;
@@ -209,8 +207,7 @@ section {
         -webkit-box-shadow: 5px 5px 3px -1px #6f6344;
         -moz-box-shadow: 5px 5px 3px -1px #6f6344;
         box-shadow: 5px 5px 3px -1px #6f6344;
-        margin-left: 5%;
-        margin-right: 5%;
+        margin: 0 5%;
     }
 
     .image-text-container {
@@ -226,8 +223,7 @@ section {
     }
 
     .wrapper {
-        padding-left: 0;
-        padding-right: 0;
+        padding: 0;
     }
 
     .image-container {
@@ -312,40 +308,16 @@ section {
         height: auto;
     }
 
-    .go-to-map {
-        padding-top: 20px;
+    .working-hours {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    #btn {
-        display: block;
-        text-decoration: none;
-        background: #6f6344;
-        border-radius: 999px;
-        box-shadow: #6f6344 0 10px 20px -10px;
-        box-sizing: border-box;
-        color: #FFFFFF;
-        cursor: pointer;
-        font-size: 13px;
-        font-weight: 700;
-        line-height: 24px;
-        opacity: 1;
-        outline: 0 solid transparent;
-        padding: 8px 12px;
-        user-select: none;
-        -webkit-user-select: none;
-        touch-action: manipulation;
-        width: fit-content;
-        word-break: break-word;
-        border: 0;
+    .paragraphs-working-hours {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
-
-    .working-hours img {
-        display: none;
-    }
-
-    .emails {
-        margin-left: 0;
-    }
-
-    $aos-distance: 200px; // It has to be above import
 }

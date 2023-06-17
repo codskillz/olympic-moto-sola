@@ -242,8 +242,8 @@ body.no-scroll {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    -webkit-overflow-scrolling: touch;
 }
-
 
 @media screen and (max-width: 1143px) {
     section {
@@ -287,3 +287,11 @@ body.no-scroll {
         grid-gap: 10px;
     }
 }
+
+@supports (-webkit-overflow-scrolling: touch) {
+    .parallax {
+      background-attachment: scroll;
+      background-position: fixed;
+      background-size: contain;
+    }
+  }

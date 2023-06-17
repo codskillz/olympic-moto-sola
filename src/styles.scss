@@ -20,7 +20,7 @@ html {
     display: flex;
 }
 
-@media screen and (max-width: 912px) {
+@media screen and (max-width: 1143px) {
     section {
         padding: 0 2em 0 2em;
     }
@@ -35,6 +35,7 @@ html {
         width: 80px; 
     }
 }
+
 @supports (-webkit-overflow-scrolling: touch) {
     .parallax {
       background-attachment: scroll;

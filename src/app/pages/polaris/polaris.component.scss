@@ -242,6 +242,7 @@ body.no-scroll {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    -webkit-overflow-scrolling: touch
 }
 
 
@@ -287,3 +288,11 @@ body.no-scroll {
         grid-gap: 10px;
     }
 }
+
+@supports (-webkit-overflow-scrolling: touch) {
+    .parallax {
+      background-attachment: scroll;
+      background-position: fixed;
+      background-size: contain;
+    }
+  }
