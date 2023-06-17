@@ -35,3 +35,9 @@ html {
         width: 80px; 
     }
 }
+@supports (-webkit-overflow-scrolling: touch) {
+    .parallax {
+      background-attachment: scroll;
+    }
+  }
+  

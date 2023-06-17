@@ -160,6 +160,10 @@ nav ul li a:hover {
     transition: all 0.3s ease;
 }
 
+.anchor-tag {
+    cursor: pointer;
+}
+
 @media screen and (max-width: 912px) {
 
     nav ul {

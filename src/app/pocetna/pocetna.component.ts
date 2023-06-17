@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PocetnaComponent implements OnInit {
   video = {
-    src: 'assets/media/cover-video.mp4',
-    type: 'video/mp4',
+    src: 'assets/media/cover-video.webm',
+    type: 'video/webm',
   };
 
   markeImages = [

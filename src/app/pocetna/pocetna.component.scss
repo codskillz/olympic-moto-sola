@@ -5,7 +5,7 @@ section {
 .video-cover video {
     position: relative;
     display: block;
-    object-fit: cover;
+    object-fit: fill;
     height: 100%;
     visibility: visible;
     overflow-clip-margin: content-box;

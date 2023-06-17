@@ -1,5 +1,11 @@
 <div class="video-cover">
-  <video [autoplay]="true" [loop]="true" [muted]="true" *ngIf="video.src">
+  <video
+    [autoplay]="true"
+    [loop]="true"
+    [muted]="true"
+    *ngIf="video.src"
+    playsinline
+  >
     <source [src]="video.src" [type]="video.type" />
   </video>
 </div>

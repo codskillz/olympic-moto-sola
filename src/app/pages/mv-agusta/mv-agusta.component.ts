@@ -332,7 +332,6 @@ export class MvAgustaComponent implements OnInit, OnDestroy {
     if (product.images.length === 0) return;
     else if (product.images.length === 1) {
       window.open(product.images[0], '_blank');
-      return;
     }
     this.isGalleryOpen = true;
     this.selectedProductName = product.name;

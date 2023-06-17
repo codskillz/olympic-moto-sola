@@ -13,10 +13,18 @@
       <div class="line"></div>
     </div>
     <ul class="menu">
-      <li (click)="toggleMenu()"><a href="#">Početna</a></li>
-      <li (click)="toggleMenu()"><a href="#o-nama">O nama</a></li>
+      <li (click)="toggleMenu()">
+        <a (click)="navigateToSection('')" class="anchor-tag">Početna</a>
+      </li>
+      <li (click)="toggleMenu()">
+        <a (click)="navigateToSection('o-nama')" class="anchor-tag">O nama</a>
+      </li>
       <div class="dropdown">
-        <li (click)="toggleMenu()"><a href="#motocikli">Motocikli</a></li>
+        <li (click)="toggleMenu()">
+          <a (click)="navigateToSection('motocikli')" class="anchor-tag"
+            >Motocikli</a
+          >
+        </li>
         <div class="dropdown-content dropdown-animation">
           <a routerLink="pages/indian" id="drop-indian">Indian</a>
           <a routerLink="pages/kawasaki" id="drop-kawa">Kawasaki</a>
@@ -25,8 +33,12 @@
           <a routerLink="pages/mv-agusta" id="drop-mv-agusta">MV Agusta</a>
         </div>
       </div>
-      <li (click)="toggleMenu()"><a href="#usluge">Usluge</a></li>
-      <li (click)="toggleMenu()"><a href="#kontakt">Kontakt</a></li>
+      <li (click)="toggleMenu()">
+        <a (click)="navigateToSection('usluge')" class="anchor-tag">Usluge</a>
+      </li>
+      <li (click)="toggleMenu()">
+        <a (click)="navigateToSection('kontakt')" class="anchor-tag">Kontakt</a>
+      </li>
     </ul>
   </nav>
 </header>

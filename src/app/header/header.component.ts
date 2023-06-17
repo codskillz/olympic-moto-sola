@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   liItems = document.querySelectorAll('li');
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {}
+
+  navigateToSection(sectionId: string) {
+    this.router.navigate(['']);
+
+    setTimeout(() => {
+      document
+        .getElementById(sectionId)
+        ?.scrollIntoView({ behavior: 'smooth' });
+    }, 300);
+  }
 
   toggleMenu() {
     const hamburger = document.querySelector('.hamburger');

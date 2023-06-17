@@ -212,7 +212,7 @@
   <br /><br />
 
   <!-- Galerija -->
-  <div class="gallery-container" *ngIf="isGalleryOpen" (click)="closeGallery()">
+  <div class="gallery-container" *ngIf="isGalleryOpen">
     <div class="gallery-grid">
       <div class="gallery-item" *ngFor="let image of selectedProductImages">
         <a target="_blank" [href]="image">
