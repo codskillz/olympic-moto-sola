@@ -343,10 +343,12 @@ section {
 
     .image-cover {
         display: block;
+        overflow: hidden;
     }
 
     .image-cover img {
         width: 100vw;
         height: auto;
+        overflow: hidden;
     }
   }
