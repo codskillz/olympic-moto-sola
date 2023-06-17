@@ -98,12 +98,12 @@
       data-aos-duration="1500"
       data-aos-once="true"
     >
-      <div class="product-item" *ngFor="let product of sportsmanProducts">
-        <img
-          [lazyLoad]="product.src"
-          [alt]="product.name"
-          (click)="openGallery(product)"
-        />
+      <div
+        class="product-item"
+        *ngFor="let product of sportsmanProducts"
+        (click)="openGallery(product)"
+      >
+        <img [lazyLoad]="product.src" [alt]="product.name" />
         <div class="product-details">
           <h2 class="product-name">{{ product.name }}</h2>
         </div>
@@ -122,12 +122,12 @@
       data-aos-duration="1500"
       data-aos-once="true"
     >
-      <div class="product-item" *ngFor="let product of xpeditionProducts">
-        <img
-          [lazyLoad]="product.src"
-          [alt]="product.name"
-          (click)="openGallery(product)"
-        />
+      <div
+        class="product-item"
+        *ngFor="let product of xpeditionProducts"
+        (click)="openGallery(product)"
+      >
+        <img [lazyLoad]="product.src" [alt]="product.name" />
         <div class="product-details">
           <h2 class="product-name">{{ product.name }}</h2>
         </div>
@@ -146,12 +146,12 @@
       data-aos-duration="1500"
       data-aos-once="true"
     >
-      <div class="product-item" *ngFor="let product of generalProducts">
-        <img
-          [lazyLoad]="product.src"
-          [alt]="product.name"
-          (click)="openGallery(product)"
-        />
+      <div
+        class="product-item"
+        *ngFor="let product of generalProducts"
+        (click)="openGallery(product)"
+      >
+        <img [lazyLoad]="product.src" [alt]="product.name" />
         <div class="product-details">
           <h2 class="product-name">{{ product.name }}</h2>
         </div>
@@ -172,12 +172,12 @@
       data-aos-duration="1500"
       data-aos-once="true"
     >
-      <div class="product-item" *ngFor="let product of rangerProducts">
-        <img
-          [lazyLoad]="product.src"
-          [alt]="product.name"
-          (click)="openGallery(product)"
-        />
+      <div
+        class="product-item"
+        *ngFor="let product of rangerProducts"
+        (click)="openGallery(product)"
+      >
+        <img [lazyLoad]="product.src" [alt]="product.name" />
         <div class="product-details">
           <h2 class="product-name">{{ product.name }}</h2>
         </div>
@@ -196,12 +196,12 @@
       data-aos-duration="1500"
       data-aos-once="true"
     >
-      <div class="product-item" *ngFor="let product of rzrProducts">
-        <img
-          [lazyLoad]="product.src"
-          [alt]="product.name"
-          (click)="openGallery(product)"
-        />
+      <div
+        class="product-item"
+        *ngFor="let product of rzrProducts"
+        (click)="openGallery(product)"
+      >
+        <img [lazyLoad]="product.src" [alt]="product.name" />
         <div class="product-details">
           <h2 class="product-name">{{ product.name }}</h2>
         </div>

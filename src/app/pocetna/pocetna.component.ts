@@ -15,6 +15,11 @@ export class PocetnaComponent implements OnInit {
     type: 'video/webm',
   };
 
+  image = {
+    src: 'assets/media/cover-image.jpg',
+    alt: 'OLYMPIC Moto Šola',
+  };
+
   markeImages = [
     {
       src: 'assets/media/images/logotipi/kawasaki-logo.png',

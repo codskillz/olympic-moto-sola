@@ -17,6 +17,10 @@ section {
     z-index: -1;
 }
 
+.image-cover {
+    display: none;
+}
+
 
 .img1 {
     background-image: url(/assets/media/images/fixed/moto-1.jpg);
@@ -327,5 +331,19 @@ section {
       background-attachment: scroll;
       background-position: fixed;
       background-size: contain;
+    }
+
+    .video-cover {
+        display: none;
+    }
+
+    .video-cover video {
+        display: none;
+    }
+
+    .image-cover img {
+        display: block;
+        width: 100vw;
+        height: auto;
     }
   }
