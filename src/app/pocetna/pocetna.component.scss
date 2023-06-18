@@ -8,7 +8,6 @@ section {
     object-fit: cover;
     max-height: 100%;
     visibility: visible;
-    overflow-clip-margin: content-box;
     overflow: hidden;
     max-width: 100%;
     top: 0;
@@ -21,20 +20,22 @@ section {
     display: none;
 }
 
+.img1,
+.img2,
+.img3 {
+    min-height: 500px;
+}
 
 .img1 {
     background-image: url(/assets/media/images/fixed/moto-1.jpg);
-    min-height: 500px;
 }
 
 .img2 {
     background-image: url(/assets/media/images/fixed/crew-1.jpg);
-    min-height: 500px;
 }
 
 .img3 {
     background-image: url(/assets/media/images/fixed/formula-1.jpg);
-    min-height: 500px;
 }
 
 .parallax {
@@ -95,14 +96,10 @@ section {
     align-items: center;
 }
 
-.najmanji {
+.najmanji,
+.obicni,
+.image-container .indian {
     height: 130px;
-    margin: 0 75px;
-    transition: 0.5s;
-}
-
-.obicni {
-    height: 160px;
     margin: 0 75px;
     transition: 0.5s;
 }
@@ -173,7 +170,7 @@ section {
     display: block;
 }
 
-#btn {
+.btn {
     display: none;
 }
 
@@ -181,19 +178,19 @@ section {
     margin-left: 35px;
 }
 
-@media (min-aspect-ratio: 16/9) {
-    .video-cover video {
-        width: 100%;
-        height: auto;
-    }
-}
+// @media (min-aspect-ratio: 16/9) {
+//     .video-cover video {
+//         width: 100%;
+//         height: auto;
+//     }
+// }
 
-@media (max-aspect-ratio: 16/9) {
-    .video-cover video {
-        width: auto;
-        height: 100%;
-    }
-}
+// @media (max-aspect-ratio: 16/9) {
+//     .video-cover video {
+//         width: auto;
+//         height: 100%;
+//     }
+// }
 
 @media screen and (max-width: 1143px) {
     section {
@@ -237,15 +234,10 @@ section {
         align-items: center;
     }
 
+    .najmanji,
     .obicni {
         height: 120px;
         margin: 0 20px 20px;
-        transition: 0.5s;
-    }
-
-    .najmanji {
-        height: 90px;
-        margin: 0 75px;
         transition: 0.5s;
     }
 
@@ -296,6 +288,32 @@ section {
         display: none;
     }
 
+    .go-to-map {
+        padding-top: 20px;
+    }
+
+    .btn {
+        display: inline-block;
+        text-decoration: none;
+        background-color: #6f6344;
+        border-radius: 999px;
+        box-shadow: 0 10px 20px -10px #6f6344;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 24px;
+        opacity: 1;
+        outline: none;
+        padding: 8px 12px;
+        user-select: none;
+        touch-action: manipulation;
+        white-space: nowrap;
+        border: none;
+      }      
+    
+
     .image-text {
         display: flex;
         flex-wrap: wrap;
@@ -318,6 +336,10 @@ section {
         align-items: center;
     }
 
+    .working-hours img {
+        display: none;
+    }
+
     .paragraphs-working-hours {
         display: flex;
         flex-wrap: wrap;
@@ -328,38 +350,33 @@ section {
 
 @supports (-webkit-overflow-scrolling: touch) {
     .parallax {
-      background-attachment: scroll;
-      background-position: fixed;
-      background-size: contain;
+        background-attachment: scroll;
+        background-position: fixed;
+        background-size: contain;
     }
 
-    // .image-cover {
-    //     width: 100vw;
-    //     height: auto;
-    //     overflow: hidden;
-    //   }
-    // .image-cover img {
-    //     width: 100%;
-    //     height: auto;
-    //     object-fit: cover;
-    // }
+    .video-cover {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+    }
 
-    @supports (-webkit-overflow-scrolling: touch) {
-        .video-cover video {
-          position: relative;
-          display: block;
-          object-fit: contain;
-          max-height: 100vh;
-          visibility: visible;
-          overflow-clip-margin: content-box;
-          overflow: hidden;
-          max-width: 100%;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          margin: auto;
-          z-index: -1;
-        }
+    /* .image-cover {
+        width: 100vw;
+        height: auto;
+        overflow: hidden;
       }
-  }
+    .image-cover img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    } */
+
+    .video-cover video {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: auto;
+        min-height: 100%;
+    }
+}
