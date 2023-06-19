@@ -354,32 +354,8 @@ section {
 
 @supports (-webkit-overflow-scrolling: touch) {
     .parallax {
-        background-attachment: scroll;
-        background-position: fixed;
+      background-attachment: scroll;
+      background-position: fixed;
+      background-size: contain;
     }
-
-    // .video-cover {
-    //     position: relative;
-    //     height: 100vh;
-    //     overflow: hidden;
-    // }
-
-    /* .image-cover {
-        width: 100vw;
-        height: auto;
-        overflow: hidden;
-      }
-    .image-cover img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    } */
-
-    // .video-cover video {
-    //     position: absolute;
-    //     left: 0;
-    //     width: 100%;
-    //     height: auto;
-    //     min-height: 100%;
-    // }
 }
