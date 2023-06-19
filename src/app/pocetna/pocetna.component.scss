@@ -19,10 +19,6 @@ section {
     }
 }
 
-.image-cover {
-    display: none;
-}
-
 .img1,
 .img2,
 .img3 {
@@ -49,7 +45,6 @@ section {
     background-repeat: no-repeat;
     background-attachment: fixed;
     -webkit-overflow-scrolling: touch;
-    overflow-x: hidden;
 }
 
 .section-title {
@@ -214,21 +209,19 @@ section {
     }
 
     .wrapper {
-        padding: 0 15px;
-        overflow-x:hidden;
+        padding: 0;
     }
 
     .image-container {
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-    }
+    }    
 
     .najmanji,
     .obicni {
         height: 120px;
-        margin: 0 20px 20px;
+        margin: 0 30px 30px;
         transition: 0.5s;
     }
 
@@ -238,7 +231,7 @@ section {
 
     .image-container .indian {
         height: 160px;
-        margin: 5px;
+        margin: 15px;
         transition: 0.5s;
     }
 
