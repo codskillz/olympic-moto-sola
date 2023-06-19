@@ -50,6 +50,7 @@ section {
     background-repeat: no-repeat;
     background-attachment: fixed;
     -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
 }
 
 .section-title {
@@ -359,9 +360,13 @@ section {
 }
 
 @supports (-webkit-overflow-scrolling: touch) {
-    .parallax {
-      background-attachment: scroll;
-      background-position: fixed;
-      background-size: contain;
+    // .parallax {
+    //   background-attachment: scroll;
+    //   background-position: fixed;
+    //   background-size: contain;
+    // }
+
+    .parallax, .img1, .img2, .img3 {
+        display: none;
     }
 }
