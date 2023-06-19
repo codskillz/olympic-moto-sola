@@ -17,7 +17,6 @@ section {
         overflow-x: hidden;
         z-index: -1;
     }
-
 }
 
 .image-cover {
@@ -183,20 +182,6 @@ section {
     margin-left: 35px;
 }
 
-// @media (min-aspect-ratio: 16/9) {
-//     .video-cover video {
-//         width: 100%;
-//         height: auto;
-//     }
-// }
-
-// @media (max-aspect-ratio: 16/9) {
-//     .video-cover video {
-//         width: auto;
-//         height: 100%;
-//     }
-// }
-
 @media screen and (max-width: 1143px) {
     section {
         padding: 0 2em;
@@ -229,7 +214,8 @@ section {
     }
 
     .wrapper {
-        padding: 0;
+        padding: 0 15px;
+        overflow-x:hidden;
     }
 
     .image-container {
@@ -351,22 +337,12 @@ section {
         justify-content: center;
         align-items: center;
     }
-
-    [data-aos] {
-        opacity: 1 !important;
-        visibility: visible !important;
-        transform: none !important;
-    }
 }
 
 @supports (-webkit-overflow-scrolling: touch) {
-    // .parallax {
-    //   background-attachment: scroll;
-    //   background-position: fixed;
-    //   background-size: contain;
-    // }
-
-    .parallax, .img1, .img2, .img3 {
-        display: none;
+    .parallax {
+      background-attachment: scroll;
+      background-position: fixed;
+      background-size: contain;
     }
 }
