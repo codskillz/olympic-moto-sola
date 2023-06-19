@@ -350,6 +350,12 @@ section {
         justify-content: center;
         align-items: center;
     }
+
+    [data-aos] {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+    }
 }
 
 @supports (-webkit-overflow-scrolling: touch) {
