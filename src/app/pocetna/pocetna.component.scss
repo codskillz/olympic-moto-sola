@@ -238,26 +238,29 @@ section {
     }
 
     .image-container-usluge {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    max-width: 100%;
+}
 
-    .image-wrapper-usluge {
-        text-align: center;
-        margin: 10px;
-    }
+.image-wrapper-usluge {
+    text-align: center;
+    margin: 10px;
+    flex: 1 0 50%;
+}
 
-    .image-caption {
-        margin-top: 10px;
-        font-size: 17px;
-    }
+.image-caption {
+    margin-top: 10px;
+    font-size: 17px;
+}
 
-    .image-wrapper-usluge img {
-        height: 100px;
-        margin-bottom: 5px;
-    }
+.image-wrapper-usluge img {
+    height: 100px;
+    margin-bottom: 5px;
+}
 
     .wrapper-kontakt {
         display: flex;
